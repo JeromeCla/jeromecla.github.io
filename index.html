@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon"  href="https://media.glassdoor.com/sqll/10566/georg-fischer-squarelogo.png">
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="jquery.js"></script>
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+
+</head>
+
+  <body>
+
+
+  <div id="topmenu"></div>
+  <div id="sidemenu_ae"></div>
+
+
+
+        <div class="col-sm-10 col-sm-offset-2 col-md-11 col-md-offset-1 main">
+          <h1 class="page-header">My Profile</h1>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <label for="machine">Programming</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                  40% Complete
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 placeholder">
+                <label>Test Cut</label>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                    20% Complete
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 placeholder">
+                  <label for="machine">Maintenance</label>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                      80% Complete
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+          <h1 class="page-header">Personal Objectives</h1>
+
+          <div class="row placeholders">
+            <div class="row"><label>Current Month</label></div>
+            <div class="col-lg-3 placeholder">
+              <div class="row"><label>Number of Test Cut done (monthly)</label></div>
+              <div class="progress progress-bar-vertical">
+                <div class="progress-bar-striped progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="height:20%;">
+                  20% Complete (4/20 Test Cut done)
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-3 placeholder">
+              <div class="row"><label>R&D related projects (yearly)</label></div>
+              <div class="progress progress-bar-vertical">
+                <div class="progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height:80%;">
+                  80% Complete (4/5 R&D projects done)
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-3 placeholder">
+              <div class="row"><label>Application Support (monthly)</label></div>
+              <div class="progress progress-bar-vertical">
+                <div class="progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="height:70%;">
+                  70% Complete (10/12 Application Support done)
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 placeholder">
+              <div class="row"><label>Application Notes (monthly)</label></div>
+              <div class="progress progress-bar-vertical">
+                <div class="progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height:50%;">
+                  50% Complete (1/2 Application Notes written)
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <h1 class="page-header">Personal Dashboard Application</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="wonlost" width="400" height="400"></canvas>
+              <h4>Test Cut Won vs Lost</h4>
+              <span class="text-muted">Comment</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="permachine" width="400" height="400"></canvas>
+              <h4>Test Cut done per machine</h4>
+              <span class="text-muted">Comment</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="timepertc" width="400" height="400"></canvas>
+              <h4>Time per Test Cut</h4>
+              <span class="text-muted">Comment</span>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="wonsegment" width="400" height="400"></canvas>
+              <h4>Test Cut won per segmentation</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="lostsegment" width="400" height="400"></canvas>
+              <h4>Test Cut lost per segmentation</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 placeholder">
+              <canvas id="toolused" width="400" height="400"></canvas>
+              <h4>Tool brand used</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-sm-12 placeholder">
+              <canvas id="TCdone" width="400" height="200"></canvas>
+              <h4>Test Cut done</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+      </div>
+
+
+    <script>
+
+  var ctx = document.getElementById("timepertc");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+        data: {
+            labels: ["<1week", "1week", "2weeks", "More"],
+            datasets: [
+                {
+                    data: [6, 70, 20, 10],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+var ctx = document.getElementById("permachine");
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+      data: {
+          labels: ["Mill VCE", "Mill HSM", "Mill HEM", "Mill HPM"],
+          datasets: [
+              {
+                  data: [12, 20, 18, 60],
+                  backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                  hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+              }
+          ]
+      },
+      options: {
+          responsive: true
+      }
+  });
+
+var ctx = document.getElementById("wonlost");
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+      data: {
+          labels: ["Won", "Lost", "Waiting"],
+          datasets: [
+              {
+                  data: [45, 87, 40],
+                  backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                  hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+              }
+          ]
+      },
+      options: {
+          responsive: true
+      }
+  });
+
+var ctx = document.getElementById("wonsegment");
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+      data: {
+          labels: ["Aeronautic", "Automotive", "Medical", "Mold and Die", "Watch"],
+          datasets: [
+              {
+                  data: [25, 35, 40,65,45],
+                  backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                  hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+              }
+          ]
+      },
+      options: {
+          responsive: true
+      }
+  });
+
+  var ctx = document.getElementById("toolused");
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+        data: {
+            labels: ["FraisA", "Sandvik", "Mikron", "Mitsubishi", "Guhring"],
+            datasets: [
+                {
+                    data: [10, 35, 40,56,45],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+  var ctx = document.getElementById("lostsegment");
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+        data: {
+            labels: ["Aeronautic", "Automotive", "Medical", "Mold and Die", "Watch"],
+            datasets: [
+                {
+                    data: [62, 30, 20,40,31],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+var ctx = document.getElementById("TCdone");
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"],
+        datasets: [
+            {
+                label:"EDM-Die Sinking",
+                data: [45, 30, 20,40,31,20,36,24,28,31,28,12],
+                borderColor:"#46BFBD",
+                backgroundColor:"transparent"
+            },
+            {
+                label:"EDM-Wire",
+                data: [60, 35, 15,43,34,18,40,24,28,31,28,12],
+                borderColor:"#F7464A",
+                backgroundColor:"transparent"
+            },
+            {
+                label:"Milling",
+                data: [90,70,80,50,31,40,36,35,46,52,58,70],
+                borderColor:"#FDB45C",
+                backgroundColor:"transparent"
+            },
+            {
+                label:"Laser",
+                data: [20, 10, 30,15,20,23,26,24,38,31,28,25],
+                borderColor:"#949FB1",
+                backgroundColor:"transparent"
+            },
+            {
+                label:"Other",
+                data: [60, 30, 20,40,31,20,36,24,28,31,28,12],
+                borderColor:"#4D5360",
+                backgroundColor:"transparent"
+            }
+        ]
+    },
+    options: {
+        responsive: true
+    }
+});
+
+var ctx = document.getElementById("gauge");
+var myLineChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets: [
+                {
+                    data: [
+                        30,
+                        30,
+                        20,
+                        1,
+                        20
+                    ],
+                    backgroundColor: [
+                        "rgb(255, 69, 96)",
+                        "rgb(206, 148, 73)",
+                        "rgb(153, 223, 89)",
+                        "rgba(0, 0, 0, 0.6)",
+                        "rgb(153, 223, 89)"
+                    ],
+                    borderWidth: 0,
+                    hoverBackgroundColor: [
+                        "rgb(255, 69, 96)",
+                        "rgb(206, 148, 73)",
+                        "rgb(153, 223, 89)",
+                        "rgba(0, 0, 0, 0.6)",
+                        "rgb(153, 223, 89)"
+                    ],
+                    hoverBorderWidth: 0
+                },
+                {
+                    data: [
+                        30,
+                        30,
+                        20,
+                        1,
+                        20
+                    ],
+                    backgroundColor: [
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0.6)",
+                        "rgba(0, 0, 0, 0)"
+                    ],
+                    borderWidth: 0,
+                    hoverBackgroundColor: [
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0)",
+                        "rgba(0, 0, 0, 0.6)",
+                        "rgba(0, 0, 0, 0)"
+                    ],
+                    hoverBorderWidth: 0
+                }
+            ]
+        },
+        options: {
+            cutoutPercentage: 0,
+            rotation: -3.1415926535898,
+            circumference: 3.1415926535898,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                enabled: false
+            },
+            title: {
+                display: true,
+                text: 4,
+                position: "bottom"
+            }
+        }
+    });
+
+
+</script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
