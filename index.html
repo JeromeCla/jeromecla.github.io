@@ -36,7 +36,14 @@
 </head>
 
   <body>
-
+    <script>
+      var password;
+      var thePassword="b1350f41011544df4448e67042951945";
+      password=prompt('Enter Password','');
+      var passhash= CryptoJS.MD5(password);
+      if (passhash==thePassword) {  }
+      else { window.location="http://www.google.com/"; }
+      </script>
 
   <div id="topmenu"></div>
   <div id="sidemenu_ae"></div>
