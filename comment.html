@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+</head>
+
+<body>
+  <script>
+    var password;
+    var thePassword="b1350f41011544df4448e67042951945";
+    password=prompt('Enter Password','');
+    var passhash= CryptoJS.MD5(password);
+    if (passhash==thePassword) {  }
+    else { window.location="http://www.google.com/"; }
+    </script>
+  <div id="topmenu"></div>
+
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <div class="col-lg-1 sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a href="customer.html"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
+          <li><a href="demand.html"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
+          <li><a href="documents.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li class="active"><a href="comment.html"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+          <li><a href="actions.html"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+          <li><a href="history.html"><span class="glyphicon glyphicon-time"></span> History</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h1 class="page-header">Chat</h1>
+      <div id="comment">
+        <div class="form-group col-lg-8">
+          <label for="challengeprocess">Message</label>
+          <textarea type="text" rows="3" class="form-control" id="message" placeholder="Write your message here ..."></textarea>
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="responsible" >Responsible for next step</label>
+            <input id="responsible" class="form-control" placeholder:"Responsible person...">
+        </div>
+      </div>
+
+    <div class="form-group col-lg-8"> </div>
+    <div class="form-group col-lg-2">
+      <button type="button" id="validationbutton" class="btn btn-primary btn-lg btn-block" onclick="duplicate()" >Send message</button>
+    </div>
+    <div class="form-group col-lg-2">
+      <button type="button" id="validationbutton" class="btn btn-success btn-lg btn-block" onclick="duplicate()" >Done</button>
+    </div>
+  </div>
+
+
+
+<script>
+
+
+var i = 0;
+function duplicate(){
+  var original = document.getElementById('comment');
+  var clone = original.cloneNode(true); // "deep" clone
+  clone.id = "comment" + ++i; // there can only be one element with an ID
+  document.getElementById("comment").before(clone);
+
+}
+
+  $( function() {
+      var availableTags = [
+        "Adrien Rodrigues",
+        "Andrea Frizche",
+        "Andrea Richina",
+        "Antoine Marty",
+        "Benjamin Paganelli",
+        "Benoit Defrasne",
+        "Christophe Massart",
+        "Christophe Thibault",
+        "David Labadie",
+        "David Magni",
+        "Denis Lyet",
+        "Jean-Paul Nicolet",
+        "Jerome Clavel",
+        "Jim Lewis",
+        "Jonas Meier",
+        "Martin Brun",
+        "Mathieu Jotterand",
+        "Patrick Affolter",
+        "Patrick Krebs",
+        "Reto Schenker",
+        "Roland Zaugg",
+        "Thomas Wengi"
+      ];
+      $( "#responsible" ).autocomplete({
+        source: availableTags
+      });
+    } );
+
+</script>
+</body>
+</html>

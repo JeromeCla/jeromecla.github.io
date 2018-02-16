@@ -1,0 +1,12 @@
+<option selected>Please choose material</option>
+<option value="aluminium">Aluminium</option>
+<option value="bronze">Bronze</option>
+<option value="carbide">Carbide</option>
+<option value="carbon">Carbon</option>
+<option value="ceramic">Ceramic</option>
+<option value="copper">Copper</option>
+<option value="graphite">Graphite</option>
+<option value="iron">Iron</option>
+<option value="nickel">Nickel</option>
+<option value="steel">Steel</option>
+<option value="titanium">Titanium</option>

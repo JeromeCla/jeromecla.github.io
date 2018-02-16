@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+</head>
+
+<body>
+  <script>
+    var password;
+    var thePassword="b1350f41011544df4448e67042951945";
+    password=prompt('Enter Password','');
+    var passhash= CryptoJS.MD5(password);
+    if (passhash==thePassword) {  }
+    else { window.location="http://www.google.com/"; }
+    </script>
+  <div id="topmenu"></div>
+
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <div class="col-lg-1 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="applnotes_detail.html"><span class="glyphicon glyphicon-folder-open"></span> Documents<span class="sr-only">(current)</span></a></li>
+          <li><a href="order_demo_part.html"><span class="glyphicon glyphicon-shopping-cart"></span> Order </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h2 class="page-header">Documents</h2>
+    <div class="col-lg-2">
+      <img src="../img/bottle.png" class="img-rounded" id="imagemachine" width="250" height="200">
+    </div>
+    <div class="col-lg-2">
+      <img src="../img/bootle1.png" class="img-rounded" id="imagemachine" width="250" height="200">
+    </div>
+    <div class="container col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Uploaded Files</strong> </div>
+            <div class="panel-body">
+
+              <!-- Standar Form -->
+              <h4>Uploaded documents</h4>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_01_EN.pdf"> Drawing </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> CAD </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> CAM (.csv4) </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Setup document </a></div>
+                  <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Marketing document </a></div>
+
+                <p>&nbsp;</p>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Download all in ZIP file </a></div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+  </div>
+
+
+  <div class="col-lg-offset-1 main">
+    <h2 class="page-header">Challenges and Added Value</h2>
+    <p class="text-left">In the today packing industry, the requirements on surface quality and part accuracy is extremely high. Especially in the PET bottle manufacturing an excellent shape accuracy and a shiny surface finish on the mold section is essential. In the current manufacturing process of blow bottle molds, a polishing process is required to achieve these quality needs.
+Today we are able to substitute this polishing process using a state of the art high speed milling machine
+such as the XSM600ULP, adapted milling strategies and a high quality tools. This reduces the production costs of a mold and simplifies the production chain for our customers.
+</p><br>
+
+<h2 class="page-header">Show attended</h2>
+<ul>
+    <li>EMO 2017</li>
+    <li>Hannover Messe 2016</li>
+</ul><br>
+<h2 class="page-header">Current Location & Contact Person</h2>
+Shangai, China <br>
+Martin Chassagne <br>
+martin.chassagne@georgfischer.com <br>
++41 77 777 77 77<br>
+
+
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h2 class="page-header">Tools</h2>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Tool Type</th>
+        <th>Brand</th>
+        <th>Reference</th>
+        <th>Quantity needed</th>
+        <th>Price Estimation per tool</th>
+        <th>Order / SAP number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tool holder</td>
+        <td>Haimer</td>
+        <td>E50-140-012</td>
+        <td>1</td>
+        <td>500 $</td>
+        <td>148.2156.32 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+      <tr>
+        <td>Tool holder</td>
+        <td>Haimer</td>
+        <td> E50-140-008</td>
+        <td>2</td>
+        <td>2'500 $</td>
+        <td>75.674.67 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+      <tr>
+        <td>Tool holder</td>
+        <td>Haimer</td>
+        <td>E50-140-006</td>
+        <td>2</td>
+        <td>1'200 $</td>
+        <td>546.7466.786 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+      <tr>
+        <td>Endmill</td>
+        <td>Franken</td>
+        <td> D12 #2890 Z.012020</td>
+        <td>4</td>
+        <td>100 $</td>
+        <td>745.2578.6758 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+      <tr>
+        <td>Ballmill</td>
+        <td>Franken</td>
+        <td>1921R.008</td>
+        <td>3</td>
+        <td>250 $</td>
+        <td>678.785.461 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+      <tr class="bg-success">
+        <td style="font-weight:bold">Overall</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="font-weight:bold">9'050 $ (Total estimated price)</td>
+        <td style="font-weight:bold">354.546.748.23 <span class="glyphicon glyphicon-shopping-cart"></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+  <script src="https://www.bootstrap-year-calendar.com/js/respond.min.js"></script>
+  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-year-calendar.min.js"></script>
+  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-popover.js"></script>
+  <script src="https://www.bootstrap-year-calendar.com/js/scripts.js"></script>
+  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="https://www.bootstrap-year-calendar.com/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-year-calendar.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <script src="js/bootstrap-year-calendar.min.js"></script>
+  <script src="css/bootstrap-year-calendar.min.css"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+
+  </script>
+</head>
+
+<body>
+  <script>
+    var password;
+    var thePassword="b1350f41011544df4448e67042951945";
+    password=prompt('Enter Password','');
+    var passhash= CryptoJS.MD5(password);
+    if (passhash==thePassword) {  }
+    else { window.location="http://www.google.com/"; }
+    </script>
+<div class="col-md-offset-1 calendar">
+  <div id="topmenu"></div>
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <div class="col-lg-1 sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a href="applnotes_detail.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li class="active"><a href="order_demo_part.html"><span class="glyphicon glyphicon-shopping-cart"></span> Order </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="calendar">aaaa</div>
+  <div class="modal modal-fade" id="event-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">
+            Part demand
+          </h4>
+        </div>
+        <div class="modal-body">
+          <input name="event-index" type="hidden">
+          <form class="form-horizontal">
+
+            <div class="form-group required">
+              <label for="min-date" class="col-sm-4 control-label">Name of show</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Part</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" readonly value="Bottle Mold">
+              </div>
+            </div>
+            <div class="form-group required">
+              <label for="min-date" class="col-sm-4 control-label">Sales Co</label>
+              <div class="col-sm-7">
+                <select name="event-reason" class="form-control" >
+                  <option>M101 - Sales Co 1</option>
+                  <option selected >M102 - Sales Co 2 (your sales Co)</option>
+                  <option>M103 - Sales Co 3</option>
+                  <option>M104 - Sales Co 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group required">
+              <label for="min-date" class="col-sm-4 control-label">Person responsible</label>
+              <div class="col-sm-7">
+                <input class="form-control" type="text" value="Person_connected">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label" >Phone number</label>
+              <div class="col-sm-7">
+                <input class="form-control" type="text" value="+41 78 974 75 12">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Email</label>
+              <div class="col-sm-7">
+                <input class="form-control" type="text" value="person_connected@georgfischer.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Person receiving</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Phone number</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Email</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Other Delivery Adress than Sales Co's</label>
+              <div class="col-sm-1">
+                <input name="event-reason" id="otherdelivery" class="form-control" type="checkbox" onclick="otherdeladress()">
+              </div>
+            </div>
+            <div id="otherdeliveryadress" class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Adress 1</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Adress 2</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Zip Code</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Country</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Other Billing Adress than Sales Co's</label>
+              <div class="col-sm-1">
+                <input name="event-reason" id="otherbilling" class="form-control" type="checkbox" onclick="otherbiladress()">
+              </div>
+            </div>
+            <div id="otherbillingadress" class="form-group">
+              <label for="min-date" class="col-sm-4 control-label">Adress 1</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Adress 2</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Zip Code</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+              <label for="min-date" class="col-sm-4 control-label">Country</label>
+              <div class="col-sm-7">
+                <input name="event-reason" class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group required">
+              <label for="min-date" class="col-sm-4 control-label">Dates</label>
+              <div class="col-sm-7">
+                <div class="input-group input-daterange" data-provide="datepicker">
+                  <input name="event-start-date" class="form-control" value="2012-04-05" type="text">
+                  <span class="input-group-addon">to</span>
+                  <input name="event-end-date" class="form-control" value="2012-04-19" type="text">
+                </div>
+              </div>
+            </div>
+              The dates corresponds to the delivery and return date of the part
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="save-event">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <b>The planning is linked to one specific part (i.e. this is the part's planning). Once a part is booked, the stock is decreased accordingly.</b>
+    </div>
+  <div id="context-menu">
+  </div>
+  <script>
+
+$('#otherdeliveryadress').hide();
+$('#otherbillingadress').hide();
+
+  function editEvent(event) {
+      $('#event-modal input[name="event-index"]').val(event ? event.id : '');
+
+      $('#event-modal input[name="event-reason"]').val(event ? event.reason : '');
+      $('#event-modal input[name="event-start-date"]').datepicker('update', event ? event.startDate : '');
+      $('#event-modal input[name="event-end-date"]').datepicker('update', event ? event.endDate : '');
+      $('#event-modal').modal();
+  }
+
+  function deleteEvent(event) {
+      var dataSource = $('#calendar').data('calendar').getDataSource();
+
+      for(var i in dataSource) {
+          if(dataSource[i].id == event.id) {
+              dataSource.splice(i, 1);
+              break;
+          }
+      }
+
+      $('#calendar').data('calendar').setDataSource(dataSource);
+      setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
+  }
+
+  function otherdeladress() {
+        if (document.getElementById('otherdelivery').checked) {
+            $('#otherdeliveryadress').show();
+        } else {
+            $('#otherdeliveryadress').hide();
+        }
+    }
+
+    function otherbiladress() {
+          if (document.getElementById('otherbilling').checked) {
+              $('#otherbillingadress').show();
+          } else {
+              $('#otherbillingadress').hide();
+          }
+      }
+
+  function saveEvent() {
+      var event = {
+          id: $('#event-modal input[name="event-index"]').val(),
+
+          reason: $('#event-modal input[name="event-reason"]').val(),
+          startDate: $('#event-modal input[name="event-start-date"]').datepicker('getDate'),
+          endDate: $('#event-modal input[name="event-end-date"]').datepicker('getDate')
+      }
+
+      var dataSource = $('#calendar').data('calendar').getDataSource();
+
+      if(event.id) {
+          for(var i in dataSource) {
+              if(dataSource[i].id == event.id) {
+
+                  dataSource[i].reason = event.reason;
+                  dataSource[i].startDate = event.startDate;
+                  dataSource[i].endDate = event.endDate;
+              }
+          }
+      }
+      else
+      {
+          var newId = 0;
+          for(var i in dataSource) {
+              if(dataSource[i].id > newId) {
+                  newId = dataSource[i].id;
+              }
+          }
+
+          newId++;
+          event.id = newId;
+
+          dataSource.push(event);
+      }
+
+      $('#calendar').data('calendar').setDataSource(dataSource);
+      setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
+      $('#event-modal').modal('hide');
+  }
+
+  $(function() {
+      var currentYear = new Date().getFullYear();
+
+      $('#calendar').calendar({
+          enableContextMenu: true,
+          enableRangeSelection: true,
+          contextMenuItems:[
+              {
+                  text: 'Update',
+                  click: editEvent
+              },
+              {
+                  text: 'Delete',
+                  click: deleteEvent
+              }
+          ],
+          selectRange: function(e) {
+              editEvent({ startDate: e.startDate, endDate: e.endDate });
+          },
+          mouseOnDay: function(e) {
+              if(e.events.length > 0) {
+                  var content = '';
+
+                  for(var i in e.events) {
+                      content += '<div class="event-tooltip-content">'
+
+                                      + '<div class="event-reason">' + e.events[i].reason + '</div>'
+                                  + '</div>';
+                  }
+
+                  $(e.element).popover({
+                      trigger: 'manual',
+                      container: 'body',
+                      html:true,
+                      content: content
+                  });
+
+                  $(e.element).popover('show');
+              }
+          },
+          mouseOutDay: function(e) {
+              if(e.events.length > 0) {
+                  $(e.element).popover('hide');
+              }
+          },
+          dayContextMenu: function(e) {
+              $(e.element).popover('hide');
+          },
+          dataSource: [
+          ]
+      });
+
+      $('#save-event').click(function() {
+          saveEvent();
+      });
+      setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
+  });
+  </script>
+  <script src="//htmlpreview.github.io/htmlpreview.min.js"></script><script>HTMLPreview.replaceAssets();</script></body>
+
+</body>
+</html>

@@ -18,6 +18,11 @@ body {
     color:green
 }
 
+.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
 .colorfilled{
  border-color: green;
 }

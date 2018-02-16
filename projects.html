@@ -20,24 +20,13 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-  <script src="https://www.bootstrap-year-calendar.com/js/respond.min.js"></script>
-  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-datepicker.min.js"></script>
-  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-year-calendar.min.js"></script>
-  <script src="https://www.bootstrap-year-calendar.com/js/bootstrap-popover.js"></script>
-  <script src="https://www.bootstrap-year-calendar.com/js/scripts.js"></script>
-  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-datepicker.min.css" rel="stylesheet">
-  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="https://www.bootstrap-year-calendar.com/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://www.bootstrap-year-calendar.com/css/bootstrap-year-calendar.min.css" rel="stylesheet">
+
   <!-- Custom styles for this template -->
   <link href="dashboard.css" rel="stylesheet">
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
-  <script src="js/bootstrap-year-calendar.min.js"></script>
-  <script src="css/bootstrap-year-calendar.min.css"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -51,38 +40,66 @@
 </head>
 
 <body>
-
+  <script>
+    var password;
+    var thePassword="b1350f41011544df4448e67042951945";
+    password=prompt('Enter Password','');
+    var passhash= CryptoJS.MD5(password);
+    if (passhash==thePassword) {  }
+    else { window.location="http://www.google.com/"; }
+    </script>
   <div id="topmenu"></div>
   <div id="sidemenu_ae"></div>
 
-<div class="col-md-offset-1 calendar">
+      <div class="col-lg-offset-1 main">
+        <h1 class="page-header">Dashboard</h1>
 
-  <script>
-      $('.calendar').calendar({
-          displayWeekNumber: true,
-          enableRangeSelection: true
+      </div>
 
-      });
-
-  </script>
-
-<b> This calendar is linked to the person connected:
-  <ul>
-    <li> Application Manager: All its CoC with detailed and the possibiltiy to see the machine used in other CoC </li>
-    <li> Application Engineer: Its own planning </li>
-    <li> Marketing/Event: Planning of all the parts, their location and the show they are supposed to attend </li>
-  </ul>
+      <div class="row">
+        <div class="col-lg-offset-1 main">
+            <div class="table-responsive">
+              <table data-toggle="table" data-url="projects_data.json" data-sort-name="technology" data-sort-order="desc">
+                <thead>
+                  <tr>
+                    <th data-field="picture"> Picture </th>
+                    <th data-field="status" data-sortable="true"> Status </th>
+                    <th data-field="customer" data-sortable="true"> Customer </th>
+                    <th data-field="region" data-sortable="true"> Region </th>
+                    <th data-field="technology" data-sortable="true"> Technology </th>
+                    <th data-field="machine" data-sortable="true"> Machine </th>
+                    <th data-field="date_submitted" data-sortable="true"> Date Submitted </th>
+                    <th data-field="date_validated" data-sortable="true"> Date Validated </th>
+                    <th data-field="date_start" data-sortable="true"> Date Started </th>
+                    <th data-field="date_expected" data-sortable="true"> Date Expected </th>
+                    <th data-field="id" data-formatter="LinkFormatter"> Actions</th>
+                  </tr>
+                </thead>
+              </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
+<script>
+
+function LinkFormatter(value) {
+   return "<div class=\"row\"><div class=\"col-lg-3\"><a href=demand.html?id="+value+"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"><a href=\"demand.html\"><span class=\"glyphicon glyphicon-trash\"></span></a></div></div>"
+}
+
+function imageFormatter() {
+    return '<img src="http://hostimage.webdev.info/images/execution_cb09e50e677390bb9d354a9ad48973b5.PNG">';
+}
+</script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 <script src="/js/bootstrap.min.js"></script>
-
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

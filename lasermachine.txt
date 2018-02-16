@@ -1,0 +1,9 @@
+<option selected>Choose Machine ...</option>
+<option value="laserp400">Laser P 400</option>
+<option value="laserp400u">Laser P 400 U</option>
+<option value="laserp400ufemto">Laser P 400/U (Femto)</option>
+<option value="laserp600u">Laser P 600 U</option>
+<option value="laserp1000u">Laser P 1000 U</option>
+<option value="laserp1200u">Laser P 1200 U</option>
+<option value="laserp1200udedicated">Laser P 1200 U Dedicated</option>
+<option value="laserp4000u">Laser P 4000 U</option>

@@ -1,0 +1,65 @@
+[
+  {
+    "type":"Machine",
+    "technology": "Milling",
+    "machine": "Mill P 250",
+    "location": "Nidau",
+    "spindle": "Spindle3000",
+    "availability": "Yes",
+    "contact": "John Mill",
+    "expert on site": "Yes",
+    "picture": "<a href=\"machine_detail.html\"> <img src=\"http://www.gfms.com/content/gfac/country_FR/en/Products/laser-texturing/laser-product-line/laser-1000-3ax-5ax/_jcr_content/par/text_image_310d/image.one_full.jpg/1510741455063.jpg\" ></a> ",
+    "region": "Europe"
+  },
+  {
+    "type":"Machine",
+    "technology": "Laser",
+    "machine": "Laser P 400",
+    "location": "Shanghai",
+    "source": "Source A",
+    "focal": "f0.8",
+    "availability": "Service until 02.03.2018",
+    "contact": "John Doe",
+    "expert on site": "Yes",
+    "picture": "<img src=\"http://www.gfms.com/content/gfac/country_FR/en/Products/laser-texturing/laser-product-line/laser-1000-3ax-5ax/_jcr_content/par/text_image_310d/image.one_full.jpg/1510741455063.jpg\" >",
+    "region": "Asia"
+  },
+  {
+    "type":"Machine",
+    "technology": "Laser",
+    "machine": "Laser P 800",
+    "location": "Paris",
+    "source": "Source A",
+    "focal": "f0.02",
+    "availability": "Service until 02.03.2018",
+    "contact": "John Sim",
+    "expert on site": "Yes",
+    "picture": "<img src=\"http://www.gfms.com/content/gfac/country_FR/en/Products/laser-texturing/laser-product-line/laser-1000-3ax-5ax/_jcr_content/par/text_image_310d/image.one_full.jpg/1510741455063.jpg\" >",
+    "region": "Europe"
+  },
+  {
+    "type":"Metrology",
+    "technology": "CMM",
+    "machine": "Metrology 3000",
+    "location": "Shanghai",
+    "precision": "2 um",
+    "error_margin": "0.3um",
+    "availability": "Yes",
+    "contact": "John Doe",
+    "expert on site": "Yes",
+    "picture": "<img src=\"http://ecatalog.mitutoyo.com/cmimages/003/309/Sec_Strato900s.jpg\" >",
+    "region": "Asia"
+  },
+  {
+    "type":"Machine",
+    "technology": "EDM-Die Sinking",
+    "machine": "Super Form K7000",
+    "location": "Chicago",
+    "generator": "ABC",
+    "availability": "Yes",
+    "contact": "John DS",
+    "expert on site": "No",
+    "picture": "<img src=\"http://www.gfms.com/content/gfac/country_FR/en/Products/laser-texturing/laser-product-line/laser-1000-3ax-5ax/_jcr_content/par/text_image_310d/image.one_full.jpg/1510741455063.jpg\" >",
+    "region": "US/Canada"
+  }
+]

@@ -1,0 +1,46 @@
+<option value="" selected>Please choose ...</option>
+<optgroup label="Part production">
+<option>Macro (PP)</option>
+<option>Matrix (PP)</option>
+<option>MacroMagnum</option>
+<option>Dynafix (PP)</option>
+<option>GPS 70/120</option>
+<option>GPS 240</option>
+<option>Delphin</option>
+<option>VDP (PP)</option>
+<option>Nano (PP)</option>
+<option>Press Adaptor</option>
+</optgroup>
+<optgroup label="EDM">
+<option>MacroJunior</option>
+<option>MacroCombi</option>
+<option>Macro (DS)</option>
+<option>Matrix (DS)</option>
+<option>MacroMagnum</option>
+<option>Dynafix (DS)</option>
+<option>GPS 240 (DS)</option>
+<option>Rotating Spindles</option>
+<option>VDP (DS)</option>
+<option>Nano (DS)</option>
+</optgroup>
+<optgroup label="Wire EDM">
+<option>MacroWedm (aut.)</option>
+<option>Ref. Element (man.)</option>
+<option>3Ruler</option>
+<option>EconoRuler</option>
+<option>Unimatic Clamping</option>
+<option>ICS Zeroline Clamping</option>
+<option>Frame Systems</option>
+<option>Rotating Spindles (W)</option>
+<option>B-Axis</option>
+</optgroup>
+<optgroup label="Automation">
+<option>Workpartner</option>
+<option>Transformer</option>
+<option>TF Concept</option>
+</optgroup>
+<optgroup label="Services">
+<option>master & Calibration Tools</option>
+<option>References & Zero Point Systems</option>
+<option>Automation</option>
+</optgroup>
