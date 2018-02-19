@@ -17,7 +17,7 @@
     "picture": "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Compressor_blisk_on_display_%282%29.jpg/1200px-Compressor_blisk_on_display_%282%29.jpg\" alt=\"Mountain View\">",
     "region": "US",
     "segmentation": "Aeronautic",
-    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option selected value=\"ongoing\">On Going</option>        <option value=\"onhold\">On Hold</option>        <option value=\"planned\">Planned</option>        <option value=\"finished\">Finished</option>        </select>",
+    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option selected value=\"ongoing\">On Going</option> <option value=\"onhold\">On Hold</option> <option value=\"planned\">Planned</option>  <option value=\"finished\">Finished</option> <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>  </select>",
     "technology": "Milling",
     "tooling": "3R"
   },
@@ -39,7 +39,7 @@
     "picture": "<img src=\"http://usglobalimages.stratasys.com/en/Applications/New%20Applications%20Billboard%20Images/fdm_pc_paper_pulp_mold.png?v=635549306743844706\" alt=\"Mountain View\">",
     "region": "France",
     "segmentation": "Mold and Die",
-    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option selected value=\"onhold\">On Hold</option>        <option value=\"planned\">Planned</option>        <option value=\"finished\">Finished</option>        </select>",
+    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option selected value=\"onhold\">On Hold</option>        <option value=\"planned\">Planned</option>        <option value=\"finished\">Finished</option>     <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>    </select>",
     "technology": "EDM-Die Sinking",
     "tooling": "3R"
   },
@@ -61,7 +61,7 @@
     "picture": "<img src=\"http://www.stpaulengraving.com/images/Laser_Texturing_Scaled/carbon_Scaled.jpg\" alt=\"Mountain View\">",
     "region": "Switzerland",
     "segmentation": "Watch",
-    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option value=\"onhold\">On Hold</option>        <option value=\"planned\">Planned</option>        <option selected value=\"finished\">Finished</option>        </select>",
+    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option value=\"onhold\">On Hold</option>        <option value=\"planned\">Planned</option>        <option selected value=\"finished\">Finished</option>     <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>    </select>",
     "technology": "Laser",
     "tooling": "3R"
   },
@@ -83,7 +83,7 @@
     "picture": "<img src=\"http://moi3d.com/gallery/images/plastic-mold-2.JPG\" alt=\"Mountain View\">",
     "region": "Switzerland",
     "segmentation": "Mold and Die",
-    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option value=\"onhold\">On Hold</option>        <option selected value=\"planned\">Planned</option>        <option value=\"finished\">Finished</option>        </select>",
+    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option value=\"ongoing\">On Going</option>        <option value=\"onhold\">On Hold</option>        <option selected value=\"planned\">Planned</option>        <option value=\"finished\">Finished</option>    <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>     </select>",
     "technology": "EDM-Die Sinking",
     "tooling": "3R"
   },
@@ -105,7 +105,7 @@
     "picture": "<img src=\"https://hifiduino.files.wordpress.com/2011/06/applealremoteinside.jpg\" alt=\"Mountain View\">",
     "region": "China",
     "segmentation": "Mold and Die",
-    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option selected value=\"ongoing\">On Going</option>        <option selected value=\"onhold\">On Hold</option>        <option selected value=\"planned\">Planned</option>        <option selected value=\"finished\">Finished</option>        </select>",
+    "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option selected value=\"ongoing\">On Going</option> <option selected value=\"onhold\">On Hold</option>  <option selected value=\"planned\">Planned</option>  <option selected value=\"finished\">Finished</option> <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>    </select>",
     "technology": "EDM-Die Sinking",
     "tooling": "3R"
   }
