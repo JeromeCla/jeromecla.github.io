@@ -26,6 +26,7 @@
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -41,7 +42,7 @@
 <body>
   <script>
     var password;
-    var thePassword="b1350f41011544df4448e67042951945";
+    var thePassword="ee857f7d156e974bd0bfd8b97d9d0c81";
     password=prompt('Enter Password','');
     var passhash= CryptoJS.MD5(password);
     if (passhash==thePassword) {  }
