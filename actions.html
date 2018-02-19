@@ -242,6 +242,27 @@
     </div>
   </div>
 
+  <div id="rejectmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Reject demand</h4>
+        </div>
+        <div class="modal-body">
+          <label for="reason">Reason of rejection</label>
+          <input type="text" row="4" class="form-control" id="reason" placeholder="Reason of rejection">
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-info" data-dismiss="modal" data-toggle="modal" data-target="#approvevalidate" value="Validate">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <div id="salesNoteModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
     <div class="alert alert-success">
