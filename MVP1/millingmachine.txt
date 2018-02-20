@@ -1,0 +1,38 @@
+<option value ="" selected>Choose Machine ...</option>
+<optgroup label="HEM">
+<option value="hem600">Mikron HEM 600</option>
+<option value="hem800">Mikron HEM 800</option>
+<option value="hem1000">Mikron HEM 1000</option>
+<option value="hem1200">Mikron HEM 1200</option>
+<option value="vce600pro">Mikron VCE 600 Pro</option>
+<option value="vce800pro">Mikron VCE 800 Pro</option>
+<option value="vce1000pro">Mikron VCE 1000 Pro</option>
+<option value="vce1200pro">Mikron VCE 1200 Pro</option>
+<option value="vce1400pro">Mikron VCE 1400 Pro</option>
+<option value="vce1600pro">Mikron HSM 1600</option>
+<option value="vce2000pro">Mikron HSM 2000</option>
+<option value="mille500u">Mikron Mill E 500 U</option>
+<option value="mille700u">Mikron Mill E 700 U</option>
+</optgroup>
+<optgroup label="HSM">
+<option value="hsm200lp">Mikron HSM 200 LP</option>
+<option value="hsm200ulp">Mikron HSM 200U LP</option>
+<option value="mills400u">Mikron Mill S 400U</option>
+<option value="mills400">Mikron Mill S 400</option>
+<option value="mills500">Mikron Mill S 500</option>
+<option value="hsm500">Mikron HSM 500</option>
+<option value="mills600u">Mikron Mill S 600 U</option>
+<option value="mills600">Mikron Mill S 600</option>
+<option value="mills800">Mikron Mill S 800</option>
+<option value="hsm700">Mikron HSM 700</option>
+</optgroup>
+<optgroup label="HPM">
+<option value="millp900">Mikron Mill P 900</option>
+<option value="hpm450u">Mikron HPM 450 U</option>
+<option value="hpm500u">Mikron HPM 500 U</option>
+<option value="hpm800ud">Mikron HPM 800 U (D)</option>
+<option value="hpm800ust">Mikron HPM 800 U ST</option>
+<option value="hpm1150u">Mikron HPM 1150 U</option>
+<option value="hpm1350u">Mikron HPM 1350 U</option>
+<option value="hpm1850u">Mikron HPM 1850 U</option>
+</optgroup>

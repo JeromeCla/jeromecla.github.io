@@ -1,0 +1,16 @@
+<option value="" selected>Choose Machine ...</option>
+<option value="cutp350">Cut P 350</option>
+<option value="cutp550">Cut P 550</option>
+<option value="cutp800">Cut P 800</option>
+<option value="cute350">Cut E 350</option>
+<option value="cute600">Cut E 600</option>
+<option value="cut200ms">Cut 200 mS</option>
+<option value="cut300ms">Cut 300 mS</option>
+<option value="cut200sp">Cut 200 Sp</option>
+<option value="cute300sp">Cut 300 Sp</option>
+<option value="cute400sp">Cut 400 Sp</option>
+<option value="cut1000">Cut 1000</option>
+<option value="cut1000oilt">Cut 1000 Oilt</option>
+<option value="cut2000oilt">Cut 2000 Oilt</option>
+<option value="cut2000s">Cut 2000 S</option>
+<option value="cut3000s">Cut 3000 S</option>

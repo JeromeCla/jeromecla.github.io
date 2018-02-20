@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+</head>
+
+<body>
+
+  <div id="topmenu"></div>
+  <div id="sidemenu_ae"></div>
+
+      <div class="col-lg-offset-1 main">
+        <h1 class="page-header">Dashboard</h1>
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-offset-1 main">
+            <div class="table-responsive">
+              <table data-toggle="table" data-url="projects_data.json" data-sort-name="technology" data-sort-order="desc">
+                <thead>
+                  <tr>
+                    <th data-field="picture"> Picture </th>
+                    <th data-field="status" data-sortable="true"> Status </th>
+                    <th data-field="customer" data-sortable="true"> Customer </th>
+                    <th data-field="region" data-sortable="true"> Region </th>
+                    <th data-field="technology" data-sortable="true"> Technology </th>
+                    <th data-field="machine" data-sortable="true"> Machine </th>
+                    <th data-field="date_submitted" data-sortable="true"> Date Submitted </th>
+                    <th data-field="date_validated" data-sortable="true"> Date Validated </th>
+                    <th data-field="date_start" data-sortable="true"> Date Started </th>
+                    <th data-field="date_expected" data-sortable="true"> Date Expected </th>
+                    <th data-field="id" data-formatter="LinkFormatter"> Actions</th>
+                  </tr>
+                </thead>
+              </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+function LinkFormatter(value) {
+   return "<div class=\"row\"><div class=\"col-lg-3\"><a href=demand.html?id="+value+"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"><a href=\"demand.html\"><span class=\"glyphicon glyphicon-trash\"></span></a></div></div>"
+}
+
+function imageFormatter() {
+    return '<img src="http://hostimage.webdev.info/images/execution_cb09e50e677390bb9d354a9ad48973b5.PNG">';
+}
+</script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

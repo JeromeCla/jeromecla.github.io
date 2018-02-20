@@ -1,0 +1,8 @@
+<option>Please choose ...</option>
+<option>Application's choice</option>
+<option>AC A/G High Quality Coated Brass Wire</option>
+<option>AC Brass - Brass Wire</option>
+<option>AC Cut Micro - Thin Wire</option>
+<option>AC Cut V Standard Coated Brass Wire</option>
+<option>AC Cut X - Coated Copper Core Wire</option>
+<option>Specified in comment</option>

@@ -1,0 +1,255 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+.glyphicon.glyphicon-one-fine-green-dot {
+    margin-top: -.4em;
+    margin-bottom: -.8em;
+    overflow: hidden;
+}
+.glyphicon.glyphicon-one-fine-green-dot:before {
+    content:"\25cf";
+    font-size: 2em;
+    color:green
+}
+
+.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+.colorfilled{
+ border-color: green;
+}
+
+.colornotfilled{
+ border-color: red;
+}
+
+.progress-bar-vertical {
+  width: 120px;
+  min-height: 400px;
+  align-items: flex-end;
+  display: inline-flex;
+}
+
+.progress-bar-vertical .progress-bar-striped {
+  width: 100%;
+  height: 0;
+  display: inline-block;
+ -webkit-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
+
+span.glyphicon {
+    font-size: 1.5em;
+    display:block;
+    text-align:center
+}
+
+span.glyphicon-eye-open {
+    font-size: 1.3em;
+    display:inline;
+    text-align:left;
+}
+
+.table-responsive img {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+
+#content img{
+      max-height: 150px;
+      max-width: 150px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+  }
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+.badge-notify{
+   background:red;
+   position:relative;
+   top: 10px;
+   left: 10px;
+}
+
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+  text-align:center;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.dropdown.dropdown-lg .dropdown-menu {
+
+    margin-top: -1px;
+
+    padding: 4px 15px;
+
+}
+
+
+
+.btn-group .btn {
+
+    border-radius: 0;
+
+    margin-left: -1px;
+
+}
+
+.form-horizontal .form-group {
+
+    margin-left: 0;
+
+    margin-right: 0;
+
+}
+
+
+
+.search-box-style {
+
+    padding: 9px;
+
+    border: solid 1px #408080;
+
+    outline: 0;
+
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #A4FFA4), to(#FFFFFF));
+
+    background: -moz-linear-gradient(top, #FFFFFF, #A4FFA4 1px, #FFFFFF 25px);
+
+    box-shadow: rgba(0,64,64, 0.3) 0px 0px 8px;
+
+    -moz-box-shadow: rgba(0,64,64, 0.3) 0px 0px 8px;
+
+    -webkit-box-shadow: rgba(0,64,64, 0.3) 0px 0px 8px;;
+
+
+
+    }
+
+@media screen and (min-width: 768px) {
+
+    #boot-search-box {
+
+        width: 500px;
+
+        margin: 0 auto;
+
+    }
+
+    .dropdown.dropdown-lg {
+
+        position: static !important;
+
+    }
+
+    .dropdown.dropdown-lg .dropdown-menu {
+
+        min-width: 500px;
+
+    }
+
+}

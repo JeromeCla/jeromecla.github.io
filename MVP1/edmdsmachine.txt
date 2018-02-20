@@ -1,0 +1,12 @@
+<option value ="" selected>Choose Machine ...</option>
+<option value="from1000">Form 1000</option>
+<option value="form2">Form 2</option>
+<option value="form3">Form 3</option>
+<option value="forme350">Form E 350</option>
+<option value="forme600">Form E 600</option>
+<option value="formp350">Form P 350</option>
+<option value="formp600">Form P 600</option>
+<option value="formp900">Form P 900</option>
+<option value="forms350">Form S 350</option>
+<option value="formx400">Form X 400</option>
+<option value="formx600">Form X 600</option>

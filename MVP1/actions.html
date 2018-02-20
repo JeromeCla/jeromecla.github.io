@@ -51,7 +51,6 @@
           <li><a href="customer.html"><span class="glyphicon glyphicon-king"></span> Customer</a></li>
           <li><a href="demand.html"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
           <li><a href="documents.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li><a href="comment.html"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
           <li class="active"><a href="actions.html"><span class="glyphicon glyphicon-star"></span> Actions<span class="sr-only">(current)</span></a></li>
           <li><a href="history.html"><span class="glyphicon glyphicon-time"></span> History</a></li>
         </ul>
@@ -78,43 +77,46 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4">
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#toolingModal">Tooling</button>
-        </div>
-        <div class="col-lg-4">
           <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#quoteModal">Quote</button>
         </div>
       </div>
     </div>
     </div>
 
-    <div id="am" class="container-fluid">
-    <h3 class="page-header">Application Manager</h3>
     <div class="container-fluid">
+
+    <div id="am" class="container-fluid">
+      <h3 class="page-header">Application Manager</h3>
       <div class="row">
-        <div class="col-lg-4">
-          <a href="planning.html" class="btn btn-primary btn-block">Planning</a>
-        </div>
         <div class="col-lg-4">
           <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#approvemodal">Approve demand</button>
         </div>
         <div class="col-lg-4">
           <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#rejectmodal">Reject demand</button>
         </div>
+        <div class="col-lg-4">
+          <select name"aeresp" class="form-control" id="aeresp">
+            <option selected> Choose Appl. Eng. responsible </option>
+            <option> Guy Demule </option>
+            <option> Patrick Affolter </option>
+            <option> James Lewis </option>
+            <option> John Sorin </option>
+            <option> Michael John </option>
+            <option> Aaron Smith </option>
+          </select>
+        </div>
       </div>
     </div>
     </div>
 
-    <div id="ae" class="container-fluid">
-    <h3 class="page-header">Application</h3>
     <div class="container-fluid">
+
+    <div id="ae" class="container-fluid">
+      <h3 class="page-header" >Application</h3>
       <div class="row">
         <div class="form-group col-lg-4">
           <label> </label>
           <button type="button" class="btn btn-primary btn-block" data-toggle="modal"  onclick="test()" data-target="#reportModal">Create Report</button>
-        </div>
-        <div class="form-group col-lg-4">
-          <label> </label>
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Create Sales Notes</button>
         </div>
         <div class="form-group col-lg-2">
           <label> Status </label>
@@ -124,10 +126,6 @@
             <option selected value="planned">Planned</option>
             <option value="finished">Finished</option>
           </select>
-        </div>
-        <div class="form-group col-lg-2">
-          <label> </label>
-          <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#sstModal">Save Status</button>
         </div>
       </div>
     </div>
@@ -230,6 +228,29 @@
     </div>
   </div>
 
+  <div id="quoteModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Generate quote</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please validate all parameters</p>
+          <label for="serial">Number of days spent</label>
+          <input type="text" class="form-control" id="infomissing" placeholder="Number of days spent">
+          <label for="serial">Material used</label>
+          <input type="text" class="form-control" id="docmissing" placeholder="Material used">
+          <label for="serial" >Cost of material used</label>
+          <input type="text" class="form-control" id="docmissing" placeholder="Cost of material used">
+        <div class="modal-footer">
+          <input type="button" class="btn btn-info" data-dismiss="modal" value="Validate">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="salesNoteModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
     <div class="alert alert-success">
@@ -276,61 +297,7 @@
     </div>
   </div>
 
-  <div id="sstModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-    <div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Success!</strong> The status has successfully been updated.
-    </div>
-    </div>
-  </div>
-
-  <div id="toolingSuccessModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-    <div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Success!</strong> Your order for tooling has been successfully linked to your project.
-    </div>
-    </div>
-  </div>
-
-  <div id="quoteModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-    <div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        <strong>Success!</strong> Your Quote has been successfully issued.
-    </div>
-    </div>
-  </div>
-
-  <div id="toolingModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Create Sales Note</h4>
-        </div>
-        <div class="modal-body">
-          <p>Please enter SAP ordering number</p>
-          <label for="serial">SAP Ordering Number</label>
-          <input type="text" class="form-control" id="sapnumber" placeholer="SAP Ordering Number">
-        </div>
-        <div class="modal-footer">
-          <input type="button" class="btn btn-info" data-dismiss="modal" data-toggle="modal" data-target="#toolingSuccessModal" value="Validate">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
-
 <script>
-
 
 function getParam(name){
  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
