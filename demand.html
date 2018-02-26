@@ -27,7 +27,6 @@
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -48,8 +47,8 @@
     var thePassword="ee857f7d156e974bd0bfd8b97d9d0c81";
     password=prompt('Enter Password','');
     var passhash= CryptoJS.MD5(password);
-    if (passhash==thePassword) {  }
-    else { window.location="http://www.google.com/"; }
+    if (passhash!=thePassword) { window.location.href="http://www.google.com/"; }
+    else { }
     </script>
   <div id="topmenu"></div>
 
@@ -57,19 +56,20 @@
     <div class="menu_section">
       <div class="col-lg-1 sidebar">
         <ul class="nav nav-sidebar">
-          <li><a href="customer.html"><span class="glyphicon glyphicon-king"></span> Customer</a></li>
-          <li class="active"><a href="demand.html"><span class="glyphicon glyphicon-list"></span> Demand<span class="sr-only">(current)</span></a></li>
-          <li><a href="documents.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li><a href="comment.html"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
-          <li><a href="actions.html"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
-          <li><a href="history.html"><span class="glyphicon glyphicon-time"></span> History</a></li>
-
+          <li><a href="" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer</a></li>
+          <li class="active"><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand<span class="sr-only">(current)</span></a></li>
+          <li><a href="" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li><a href="" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat </a></li>
+          <li><a href="" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+          <li><a href="" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
+          <li><a href="history.html" id="historyhtml"><span class="glyphicon glyphicon-time"></span> History</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="col-lg-offset-1 main">
+    <h1 class="text-center" id="customername">Customer's name</h1>
     <h2 class="page-header">Machine</h2>
 
     <form>
@@ -451,8 +451,7 @@
           <li> Advanced: Test Cut achievable with fine tuning of some parameters
           <li> Expert: Test Cut achievable by developping new technology, need strong expertise
         </ul>
-        Remark: The level of difficulty does not only depend on the part but also on the results achieved. It is related to the skills necessary to achieve the results.
-        E.g. The part can be easy to do but one can achieve a time below what would be expected thanks to its expertise.
+        Remark: The level of difficulty is the one required by the customer if any. E.g.the customer wants the test cut only with standard parameters
       </div>
       <div class="form-group col-lg-6">
         <label for="preprocess">Pre Process</label>
@@ -659,14 +658,12 @@ console.log(data);
   document.getElementById('imagemachine').src = '../img/' +img+'.jpg' ;
   }
 
-
-
-
-
-
-
-
-
+  document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
+  document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
+  document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");
+  document.getElementById("commenthtml").href = "comment.html?id="+getParam("id");
+  document.getElementById("actionshtml").href = "actions.html?id="+getParam("id");
+  document.getElementById("finalizetchtml").href = "finalizetc.html?id="+getParam("id");
 </script>
 <!-- Bootstrap core JavaScript
 ================================================== -->

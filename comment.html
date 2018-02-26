@@ -26,7 +26,6 @@
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="js/ie-emulation-modes-warning.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -45,8 +44,8 @@
     var thePassword="ee857f7d156e974bd0bfd8b97d9d0c81";
     password=prompt('Enter Password','');
     var passhash= CryptoJS.MD5(password);
-    if (passhash==thePassword) {  }
-    else { window.location="http://www.google.com/"; }
+    if (passhash!=thePassword) { window.location.href="http://www.google.com/"; }
+    else { }
     </script>
   <div id="topmenu"></div>
 
@@ -54,18 +53,20 @@
     <div class="menu_section">
       <div class="col-lg-1 sidebar">
         <ul class="nav nav-sidebar">
-          <li><a href="customer.html"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
-          <li><a href="demand.html"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
-          <li><a href="documents.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li class="active"><a href="comment.html"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
-          <li><a href="actions.html"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
-          <li><a href="history.html"><span class="glyphicon glyphicon-time"></span> History</a></li>
+          <li><a href="" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
+          <li><a href="" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
+          <li><a href="" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li class="active"><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+          <li><a href="" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+          <li><a href="" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
+          <li><a href=""><span class="glyphicon glyphicon-time"></span> History</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="col-lg-offset-1 main">
+    <h1 class="text-center">Customer's name</h1>
     <h1 class="page-header">Chat</h1>
       <div id="comment">
         <div class="form-group col-lg-8">
@@ -130,6 +131,24 @@ function duplicate(){
         source: availableTags
       });
     } );
+
+    function getParam(name){
+     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+     var regexS = "[\\?&]"+name+"=([^&#]*)";
+     var regex = new RegExp( regexS );
+     var results = regex.exec (window.location.href);
+     if (results == null)
+         return "";
+         else
+         return results[1];
+    }
+
+    document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
+    document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
+    document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");
+    document.getElementById("commenthtml").href = "comment.html?id="+getParam("id");
+    document.getElementById("actionshtml").href = "actions.html?id="+getParam("id");
+    document.getElementById("finalizetchtml").href = "finalizetc.html?id="+getParam("id");
 
 </script>
 </body>
