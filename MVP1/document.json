@@ -18,7 +18,7 @@
     "customer": "Motor Eng.",
     "region": "US",
     "opaxis": "5",
-    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demandA.html\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
+    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html?id=1\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
   },
   {
     "id": "2",
@@ -39,7 +39,7 @@
     "customer": "象形字",
     "region": "Taiwan",
     "opaxis": "3",
-    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
+    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html?id=2\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
   },
   {
     "id": "3",
@@ -60,7 +60,7 @@
     "customer": "Watch Int.",
     "region": "Switzerland",
     "opaxis": "3",
-    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
+    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html?id=3\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
   },
   {
     "id": "4",
@@ -81,7 +81,7 @@
     "customer": "Remote Design Co",
     "region": "Switzerland",
     "opaxis": "3",
-    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
+    "glyphicons": "<div class=\"row\"><div class=\"col-lg-3\"><a href=\"demand.html?id=4\"><span class=\"glyphicon glyphicon-play\"></span></a></div> <div class=\"col-lg-3\"></div></div>"
   },
   {
     "id": "5",
