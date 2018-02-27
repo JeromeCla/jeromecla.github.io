@@ -239,9 +239,35 @@
           <label>Diameter</label>
           <input type="text" class="form-control" id="wirediameter" placeholder="Diameter">
         </div>
-        <div class="form-group col-lg-7">
+        <div class="form-group col-lg-5">
           <label>Comment</label>
           <input type="text" class="form-control" id="wirecomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="wirerequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-2">
+          <label for="electrode">Dielectric</label>
+          <select id="dielectricselwire" class="form-control">
+            <script>  $("#dielectricselwire").load("dielectric.txt");</script>
+          </select>
+        </div>
+        <div class="form-group col-lg-8">
+          <label>Comment</label>
+          <input type="text" class="form-control" id="dielectriccomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="dielectricrequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
         </div>
       </div>
 
@@ -267,9 +293,35 @@
             <script>  $("#electrodematerialsel").load("material.txt");</script>
           </select>
         </div>
-        <div class="form-group col-lg-6">
+        <div class="form-group col-lg-4">
           <label>Comment</label>
-          <input type="text" class="form-control" id="electrodecomment" placeholder="Comment">
+          <input type="text" class="form-control" id="wirecomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="wirerequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-2">
+          <label for="electrode">Dielectric</label>
+          <select id="dielectricselds" class="form-control">
+            <script>  $("#dielectricselds").load("dielectric.txt");</script>
+          </select>
+        </div>
+        <div class="form-group col-lg-8">
+          <label>Comment</label>
+          <input type="text" class="form-control" id="dielectriccomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="dielectricrequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
         </div>
       </div>
 

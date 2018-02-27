@@ -1,4 +1,4 @@
-<option>Please choose ...</option>
+<option value="" selected>Please choose ...</option>
 <option>N/A</option>
 <option>Conical</option>
 <option>Cylindrical</option>
