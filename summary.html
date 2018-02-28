@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <link href="css/progress-wizard.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+</head>
+
+<body>
+
+  <div id="topmenu"></div>
+
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <div class="col-lg-1 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
+          <li ><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
+          <li><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
+          <li><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+          <li><a href="actions.html" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+          <li><a href="finalizetc.html" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
+          <li><a href="history.html" ><span class="glyphicon glyphicon-time"></span> History</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h1 class="page-header">Test Cut demand summary</h1>
+    <ul class="progress-indicator">
+      <li class="completed"> <span class="bubble"></span> Demand sent </li>
+      <li class="completed"> <span class="bubble"></span> Accepted </li>
+      <li> <span class="bubble"></span> Planned </li>
+      <li> <span class="bubble"></span> In progress </li>
+      <li> <span class="bubble"></span> Finished </li>
+      <li> <span class="bubble"></span> Customer visit </li>
+    </ul>
+    <div class="col-lg-7">
+      <div class="panel panel-body">
+        <h3 class="page-header">Customer information</h3>
+        <div class="form-group col-lg-4">
+            <label for="customername">Customer's name</label>
+            <input type="text" readonly class="form-control" id="customername" value="MTU Aero Engines">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Contact person</label>
+            <input type="text" readonly class="form-control" id="customername" value="Hans Peter">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Phone number</label>
+            <input type="text" readonly class="form-control" id="customername" value="+49 236 45 44">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="panel panel-body">
+        <h3 class="page-header">Chat Messages</h3>
+        <div class="form-group col-lg-8">
+            <label for="customername">Last Message</label>
+            <textarea type="text" row="4" readonly class="form-control" id="customername">drawing required asap. Cannot plan otherwise</textarea>
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Responsible</label>
+            <input type="text" readonly class="form-control" id="customername" value="Mike Daniel">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-7">
+      <div class="panel panel-body">
+        <h3 class="page-header">General information</h3>
+        <div class="form-group col-lg-4">
+            <label for="">Type of demand</label>
+            <input type="text" readonly class="form-control" id="customername" value="Test Cut">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="">Region in charge</label>
+            <input type="text" readonly class="form-control" id="customername" value="International">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Appl. Engineer in charge</label>
+            <input type="text" readonly class="form-control" id="customername" value="N/A">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Technology</label>
+            <input type="text" readonly class="form-control" id="customername" value="Milling">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Machine</label>
+            <input type="text" readonly class="form-control" id="customername" value="HSM 800">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="customername">Date expected</label>
+            <input type="text" readonly class="form-control" id="customername" value="12.09.2018">
+        </div>
+        <h3 class="page-header">Missing information</h3>
+        <div class="form-group col-lg-4">
+            <label for="Info missing">Information missing</label>
+            <input type="text" readonly class="form-control colorfilled" id="customername" value="">
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="Document missing">Document missing</label>
+            <div class="input-group">
+            <input type="text" readonly class="form-control colornotfilled" id="customername" value="CAD file and drawings">
+            <span class="input-group-addon warning"><span class="glyphicon glyphicon-warning-sign"></span></span>
+            </div>
+        </div>
+        <div class="form-group col-lg-4">
+            <label for="Document missing">Material missing</label>
+            <input type="text" readonly class="form-control colorfilled" id="customername" value="">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="panel panel-body">
+        <h3 class="page-header">Documents</h3>
+              <div class="panel panel-default">
+                <div class="panel-heading"><strong>Uploaded Files </strong> </div>
+                <div class="panel-body">
+                    <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_01_EN.pdf"> Picture current part 1 </a></div>
+                    <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Picture current part 2</a></div>
+                    <p>&nbsp;</p>
+                    <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Download all in ZIP file </a></div>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
