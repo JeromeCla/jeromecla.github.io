@@ -53,7 +53,7 @@
           <li ><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
           <li><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
           <li><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
           <li><a href="actions.html" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
           <li><a href="finalizetc.html" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
           <li><a href="history.html" ><span class="glyphicon glyphicon-time"></span> History</a></li>
@@ -81,11 +81,11 @@
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Contact person</label>
-            <input type="text" readonly class="form-control" id="customername" value="Hans Peter">
+            <input type="text" readonly class="form-control" id="namecontact1" value="Hans Peter">
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Phone number</label>
-            <input type="text" readonly class="form-control" id="customername" value="+49 236 45 44">
+            <input type="text" readonly class="form-control" id="phonecontact1" value="+49 236 45 44">
         </div>
       </div>
     </div>
@@ -109,43 +109,43 @@
         <h3 class="page-header">General information</h3>
         <div class="form-group col-lg-4">
             <label for="">Type of demand</label>
-            <input type="text" readonly class="form-control" id="customername" value="Test Cut">
+            <input type="text" readonly class="form-control" id="typedemand" value="Test Cut">
         </div>
         <div class="form-group col-lg-4">
             <label for="">Region in charge</label>
-            <input type="text" readonly class="form-control" id="customername" value="International">
+            <input type="text" readonly class="form-control" id="salesco" value="International">
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Appl. Engineer in charge</label>
-            <input type="text" readonly class="form-control" id="customername" value="N/A">
+            <input type="text" readonly class="form-control" id="appleng" value="N/A">
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Technology</label>
-            <input type="text" readonly class="form-control" id="customername" value="Milling">
+            <input type="text" readonly class="form-control" id="techno" value="Milling">
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Machine</label>
-            <input type="text" readonly class="form-control" id="customername" value="HSM 800">
+            <input type="text" readonly class="form-control" id="" value="HSM 800">
         </div>
         <div class="form-group col-lg-4">
             <label for="customername">Date expected</label>
-            <input type="text" readonly class="form-control" id="customername" value="12.09.2018">
+            <input type="text" readonly class="form-control" id="" value="12.09.2018">
         </div>
         <h3 class="page-header">Missing information</h3>
         <div class="form-group col-lg-4">
             <label for="Info missing">Information missing</label>
-            <input type="text" readonly class="form-control colorfilled" id="customername" value="">
+            <input type="text" readonly class="form-control colorfilled" id="" value="">
         </div>
         <div class="form-group col-lg-4">
             <label for="Document missing">Document missing</label>
             <div class="input-group">
-            <input type="text" readonly class="form-control colornotfilled" id="customername" value="CAD file and drawings">
+            <input type="text" readonly class="form-control colornotfilled" id="" value="CAD file and drawings">
             <span class="input-group-addon warning"><span class="glyphicon glyphicon-warning-sign"></span></span>
             </div>
         </div>
         <div class="form-group col-lg-4">
             <label for="Document missing">Material missing</label>
-            <input type="text" readonly class="form-control colorfilled" id="customername" value="">
+            <input type="text" readonly class="form-control colorfilled" id="" value="">
         </div>
       </div>
     </div>
@@ -166,6 +166,60 @@
     </div>
   </div>
 
+
+<script>
+function readTextFile(file, callback) {
+var rawFile = new XMLHttpRequest();
+rawFile.overrideMimeType("application/json");
+rawFile.open("GET", file, true);
+rawFile.onreadystatechange = function() {
+    if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
+    }
+}
+rawFile.send(null);
+}
+
+readTextFile("tcdata/testcut"+getParam("id")+".json", function(text){
+var data = JSON.parse(text);
+$.each(data, function(id, val){
+  var $el = $('[id="'+id+'"]'),
+      type = $el.attr('type');
+
+  switch(type){
+      case 'checkbox':
+          $el.attr('checked', 'checked');
+          break;
+      case 'radio':
+          $el.filter('[value="'+val+'"]').attr('checked', 'checked');
+          break;
+      default:
+          $el.val(val);
+  }
+});
+console.log(data);
+});
+
+
+function getParam(name){
+ name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+ var regexS = "[\\?&]"+name+"=([^&#]*)";
+ var regex = new RegExp( regexS );
+ var results = regex.exec (window.location.href);
+ if (results == null)
+     return "";
+     else
+     return results[1];
+}
+
+  document.getElementById("summaryhtml").href = "summary.html?id="+getParam("id");
+  document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
+  document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
+  document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");
+  document.getElementById("commenthtml").href = "comment.html?id="+getParam("id");
+  document.getElementById("actionshtml").href = "actions.html?id="+getParam("id");
+  document.getElementById("finalizetchtml").href = "finalizetc.html?id="+getParam("id");
+</script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

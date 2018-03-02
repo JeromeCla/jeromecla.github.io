@@ -48,10 +48,11 @@
     <div class="menu_section">
       <div class="col-lg-1 sidebar">
         <ul class="nav nav-sidebar">
+          <li><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
           <li class="active"><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
           <li><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
           <li><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
           <li><a href="actions.html" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
           <li><a href="finalizetc.html" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
           <li><a href="history.html" ><span class="glyphicon glyphicon-time"></span> History</a></li>
@@ -254,6 +255,7 @@ $.each(data, function(id, val){
 console.log(data);
 });
 
+document.getElementById("summaryhtml").href = "summary.html?id="+getParam("id");
 document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
 document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
 document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");

@@ -47,6 +47,7 @@
     <div class="menu_section">
       <div class="col-lg-1 sidebar">
         <ul class="nav nav-sidebar">
+          <li><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
           <li><a href="" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
           <li><a href="" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
           <li><a href="" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
@@ -137,6 +138,7 @@ function duplicate(){
          return results[1];
     }
 
+    document.getElementById("summaryhtml").href = "summary.html?id="+getParam("id");
     document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
     document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
     document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");

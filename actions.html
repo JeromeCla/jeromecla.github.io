@@ -49,6 +49,7 @@
     <div class="menu_section">
       <div class="col-lg-1 sidebar">
         <ul class="nav nav-sidebar">
+          <li><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
           <li><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer</a></li>
           <li><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
           <li><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
@@ -389,7 +390,7 @@ function test(){
   pptx.save('GF_Template');
 
 }
-
+  document.getElementById("summaryhtml").href = "summary.html?id="+getParam("id");
 document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
 document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
 document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");

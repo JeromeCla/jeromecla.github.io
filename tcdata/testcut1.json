@@ -1,6 +1,7 @@
 {
   "opaxis":"3",
   "status":"onhold",
+  "appleng": "John Doe",
   "accuracy_priority":"2",
   "accuracy":"cf drawing",
   "adress":"98 avenue georges franklin",
@@ -19,7 +20,7 @@
   "commentcontact2":"Responsible for technical question",
   "confidentiality":"Ultra confidential",
   "country":"Switzerland",
-  "customername":"MTU",
+  "customername":"Motor Eng.",
   "cuttingtoolcomment":"He uses only Fraisa mill becasue good relations",
   "cuttingtooldiameter":"",
   "cuttingtoolprovided":"No",
