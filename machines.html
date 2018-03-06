@@ -49,7 +49,53 @@
       <div class="col-lg-offset-1 main">
         <h1 class="page-header">Dashboard</h1>
         <h2 class="sub-header">Search</h2>
+
       <div class="row">
+        <div class="input-group" id="boot-search-box">
+          <input id="input" type="text" class="form-control" placeholder="Type a search term like: mobile phone" />
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="contain">Type:</label>
+                      <select class="form-control">
+                        <option value="all" selected>All</option>
+                        <option value="milling">Machine</option>
+                        <option value="edm-ds">Metrology</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="contain">Machine:</label>
+                      <select class="form-control">
+                        <option value="all" selected>All</option>
+                        <option value="milling">Milling</option>
+                        <option value="edm-ds">EDM-Die Sinking</option>
+                        <option value="edm-wire">EDM-Wire</option>
+                        <option value="laser">Laser</option>
+                        <option value="am">Additive Manufacturing</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="contain">Location:</label>
+                      <select class="form-control">
+                        <option value="all" selected>All</option>
+                        <option value="steel">Asia</option>
+                        <option value="aluminium">Europe</option>
+                        <option value="carbon">US</option>
+                      </select>
+                    </div>
+                    <br /><br /><br /><br />
+                    <button type="submit" class="btn btn-primary btn-block" onclick="myFunction()">Search :: <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn btn-success " onclick="myFunction()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</div>
         <div class="table-responsive">
               <table data-toggle="table" data-url="machine.json" >
                 <thead>

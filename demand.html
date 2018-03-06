@@ -209,19 +209,20 @@
             <label for="cad">CAD</label>
             <input type="text" class="form-control" id="cad" placeholder="CAD">
           </div>
+          <div class="form-group row"></div>
   </div>
 
   <div id="partsrequirementsdiv">
     <div class="col-lg-offset-1 main">
       <div class="row">
-    <div class="col-lg-2"><h2 class="page-header"> Part's requirements </div>
+    <div class="col-lg-3"><h2 class="page-header"> Part's requirements </div>
        <div class=" col-lg-2">
          <input type="text" id="partname" class="form-control" placeholder="Name of Part">
        </div>
        <div class=" col-lg-2">
        <button id="new_part" onclick=duplicate() type="button" class="btn btn-success">Add New Part to the Test Cut</button>
      </div>
-     <div class=" col-lg-6"></div></h2>
+     <div class=" col-lg-5"></div></h2>
    </div>
 
       <div id="wire" style="display:none">
@@ -443,25 +444,11 @@
           <option value="" selected>Select part type ...</option>
           <option>Production</option>
           <option>Prototype</option>
+          <option>Electrode</option>
+          <option>Mold</option>
         </select>
       </div>
-      <div class="form-group col-lg-4">
-        <label for="parttype">Challenges</label>
-        <select id="challengesel" class="form-control">
-          <option value="" selected>Select part type ...</option>
-          <option>Speed</option>
-          <option>Small form</option>
-          <option>Material difficulty</option>
-          <option>Esthetic</option>
-          <option>Functional surfaces</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group col-lg-4">
-          <label for="parttype">Comment of challenge</label>
-        <input type="text"  id="challengecomment" class="form-control" placeholder="Main challenge">
-      </div>
-
+      <div class="row">   &nbsp; </div>
 </div>
 </div>
 

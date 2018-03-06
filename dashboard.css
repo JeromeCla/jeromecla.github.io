@@ -60,6 +60,12 @@ span.glyphicon {
     text-align:center
 }
 
+span.glyphicon-inline {
+    font-size: 1.5em;
+    display:inline;
+    text-align:center
+}
+
 span.glyphicon-eye-open {
     font-size: 1.3em;
     display:inline;
@@ -197,7 +203,7 @@ span.glyphicon-eye-open {
     .timeline > li {
         margin-bottom: 20px;
         position: relative;
-        
+
     }
 
         .timeline > li:before,

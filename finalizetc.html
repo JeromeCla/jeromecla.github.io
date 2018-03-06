@@ -83,12 +83,32 @@
       </div>
       <div class="form-group col-lg-3">
       <ul>
-        <li>5 stars: Beyond customer's expectations (>120%)/li>
+        <li>5 stars: Beyond customer's expectations (>120%)</li>
         <li>4 stars: Whithin customer's expectations (90-100%)</li>
         <li>3 stars: Slightly below expectations (60-90%)</li>
         <li>2 stars: Below expectation (30-60%)</li>
         <li>1 star: Way below expectation or demand not understood (0-30%)</li>
       </ul>
+        </div>
+        <div class="form-group col-lg-5">
+          <label for="parttype">Challenges</label>
+          <select id="challengesel" class="form-control">
+            <option value="" selected>Select part type ...</option>
+            <option>Speed</option>
+            <option>Small form</option>
+            <option>Material difficulty</option>
+            <option>Esthetic</option>
+            <option>Functional surfaces</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="parttype">Comment of challenge</label>
+          <input type="text"  id="challengecomment" class="form-control" placeholder="Main challenge">
+        </div>
+        <div class="form-group col-lg-1">
+          <label for="parttype">Add a challenge</label>
+            <span class="glyphicon glyphicon-plus"> </span>
         </div>
       <div class="form-group col-lg-6">
         <label for="parttype">Major Challenges</label>
@@ -98,6 +118,8 @@
           <label for="parttype">Solution found</label>
           <textarea type="text" rows="2" id="solutionchallenges" class="form-control" placeholder="Solution for each challenge faced during test cut"></textarea>
       </div>
+
+
       <div class="form-group col-lg-12">
         <label>Curtomer's reaction (if on site) </label>
         <textarea type="text" rows="2" id="customerreaction" class="form-control" placeholder="Customer's reaction"></textarea>
