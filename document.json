@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "status": "finished",
     "technology": "Milling",
     "machine": "Mill HPM 800",
     "segmentation": "Aeronautic",
@@ -22,6 +23,7 @@
   },
   {
     "id": "2",
+    "status": "finished",
     "technology": "EDM-Die Sinking",
     "machine": "FORM E 400",
     "segmentation": "Mold and Die",
@@ -43,6 +45,7 @@
   },
   {
     "id": "3",
+    "status": "finished",
     "technology": "Laser",
     "machine": "Laser P 400U",
     "segmentation": "Watch",
@@ -64,6 +67,7 @@
   },
   {
     "id": "4",
+    "status": "cancelled",
     "technology": "EDM-Die Sinking",
     "machine": "FORM K 350",
     "segmentation": "Mold and Die",
@@ -85,6 +89,7 @@
   },
   {
     "id": "5",
+    "status": "finished",
     "technology": "EDM-Die Sinking",
     "machine": "FORM K 350",
     "segmentation": "Mold and Die",

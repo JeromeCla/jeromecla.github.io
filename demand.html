@@ -110,10 +110,6 @@
               <script>  $("#lasermachinesel").load("lasermachine.txt");</script>
             </select>
           </div>
-          <div class="col-lg-3">
-            <label class="control-label" for="serial">Serial Number</label>
-            <input type="text" class="form-control" placeholder="Serial Number" id=serial_number >
-          </div>
           <div class="col-lg-6">
             <label for="serial">Comment on machine</label>
             <input type="text" class="form-control" placeholder="Comment on machine" id=commentmachine >
@@ -161,7 +157,7 @@
         <label>Expected finished date</label>
         <input id="datefinish" type="text" class="form-control" placeholder="Finish date expected">
       </div>
-      <div class="form-group col-lg-6">
+      <div class="form-group col-lg-4">
         <label for="confidentiality">Confidentiality</label>
         <select id="confidentiality" class="form-control">
           <option selected >Choose confidentiality level ...</option>
@@ -172,20 +168,30 @@
           <option>Ultra confidential</option>
         </select>
       </div>
-      <div class="form-group col-lg-6">
+      <div class="form-group col-lg-4">
+        <label for="confidentiality">Authorize sales note creation</label>
+        <select id="slaesnotecreation" class="form-control">
+          <option selected >Choose authorization level ...</option>
+          <option>Authorize Name and Picture</option>
+          <option>Authorize only Picture</option>
+          <option>Authorize picture blurred</option>
+          <option>Do not authorize</option>
+        </select>
+      </div>
+      <div class="form-group col-lg-4">
         <label for="salesman">Salesman</label>
         <input id="salesman" type="text"  readonly class="form-control" value="John Doe">
       </div>
 
       <div class="form-row">
         <div class="form-group col-lg-2">
-          <label for="tooling">Tooling</label>
+          <label for="tooling">Fixture</label>
           <select id="toolingsel" class="form-control">
             <script>  $("#toolingsel").load("tooling.txt");</script>
           </select>
         </div>
         <div class="form-group col-lg-2">
-          <label>Tooling provided</label>
+          <label>Fixture provided</label>
           <select id="toolingprovided" class="form-control">
             <option value ="" selected>Please choose ...</option>
             <option>No</option>
@@ -401,7 +407,7 @@
         </select>
       </div>
     </div>
-    <div class="form-row col-lg-12">
+    <div id="normalpriority" class="form-row col-lg-12">
       <label for="priority">Priority</label>
       <div class="form-row">
         <div class="form-group col-lg-4">
@@ -439,6 +445,59 @@
         </div>
         <div class="form-group col-lg-4">
           <input type="text"  id="surface_finish" class="form-control" placeholder="Surface Finish Tolerance">
+        </div>
+      </div>
+    </div>
+    <div id="edmdspriority" class="form-row col-lg-12">
+      <label for="priority">Priority</label>
+      <div class="form-row">
+        <div class="form-group col-lg-3">
+          <label>Speed</label>
+          <select id="speed_priority" class="form-control">
+            <option value="" selected>Please choose priority ...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-3">
+          <label>Accuracy</label>
+          <select id="accuracy_priority" class="form-control">
+            <option value="" selected>Please choose priority ...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-3">
+          <label>Surface Finish</label>
+          <select id="surface_finish_priority" class="form-control">
+            <option value="" selected>Please choose priority ...</option>
+            <option >1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-3">
+          <label>Wear</label>
+          <select id="wear_priority" class="form-control">
+            <option value="" selected>Please choose priority ...</option>
+            <option >1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="form-group col-lg-3">
+          <input type="text" id="speed" class="form-control" placeholder="Speed Tolerance">
+        </div>
+        <div class="form-group col-lg-3">
+          <input type="text"  id="accuracy" class="form-control" placeholder="Accuracy Tolerance">
+        </div>
+        <div class="form-group col-lg-3">
+          <input type="text"  id="surface_finish" class="form-control" placeholder="Surface Finish Tolerance">
+        </div>
+        <div class="form-group col-lg-3">
+          <input type="text"  id="wear" class="form-control" placeholder="Wear comment">
         </div>
       </div>
     </div>
@@ -662,7 +721,8 @@ $.each(data, function(id, val){
 console.log(data);
 });
 
-
+$("#normalpriority").show()
+$("#edmdspriority").hide()
     $('#techno').on('change',function(){
     var selection = $(this).val();
     switch(selection){
@@ -685,6 +745,8 @@ console.log(data);
       $("#cuttingtool").hide()
       $("#wire").hide()
       $('#edmdsmachinesel').on('change',function(){ var sel = $(this).val(); load(sel); })
+      $("#normalpriority").hide()
+      $("#edmdspriority").show()
       break;
       case "edmwire":
       $("#edmwiremachine").show()
