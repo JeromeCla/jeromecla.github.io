@@ -1,4 +1,14 @@
 <option>Please choose ...</option>
+<option>Specified in comment</option>
+<option>Decision to application engineer</option>
+<optgroup label="Type">
+<option>AC A/G High Quality Coated Brass Wire</option>
+<option>AC Brass - Brass Wire</option>
+<option>AC Cut Micro - Thin Wire</option>
+<option>AC Cut V Standard Coated Brass Wire</option>
+<option>AC Cut X - Coated Copper Core Wire</option>
+</optgroup>
+<optgroup label="AC A/G High Quality Coated Brass Wire">
 <option>AC Cut AH 900</option>
 <option>AC Cut AH 500</option>
 <option>AC Cut AH 400</option>
@@ -10,6 +20,8 @@
 <option>AC Cut VH</option>
 <option>AC Cut D 500</option>
 <option>AC Cut D 800</option>
+</optgroup>
+<optgroup label="AC A/G High Quality Coated Brass Wire">
 <option>AC Cut VS 500</option>
 <option>AC Cut VS 900</option>
 <option>AC Cut VS 900+</option>
@@ -17,10 +29,14 @@
 <option>AC Cut VL 900</option>
 <option>AC Cut VE 900</option>
 <option>AC Cut VE 500</option>
+</optgroup>
+<optgroup label="AC Cut X - Coated Copper Core Wire">
 <option>AC Cut Xcc</option>
 <option>AC Cut Xs</option>
 <option>Ac Cut X</option>
 <option>AC Cut XL</option>
+</optgroup>
+<optgroup label="AC Brass - Brass Wire">
 <option>AC Brass 400</option>
 <option>AC Brass 500</option>
 <option>AC Brass 900</option>
@@ -29,14 +45,18 @@
 <option>AC Brass LP 1000</option>
 <option>AC Brass 950 PF</option>
 <option>AC Brass 1000</option>
+</optgroup>
+<optgroup label="AC Cut Micro - Thin Wire">
 <option>AC Cut Micro S</option>
 <option>AC Cut Micro SP-S/SP-Z</option>
 <option>AC Cut Micro A</option>
 <option>AC Cut Micro Brass</option>
 <option>AC Cut Micro TWS</option>
 <option>AC Cut Micro TWSS</option>
+</optgroup>
+<optgroup label="Other">
 <option>AC Cut Molybden</option>
 <option>Intech Brass 500</option>
 <option>Intech Zinc Cut</option>
 <option>Intech Zinc Cut</option>
-<option>Specified in comment</option>
+</optgroup>
