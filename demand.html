@@ -379,6 +379,50 @@
         </div>
         </div>
       </div>
+      <div class="form-row">
+        <div id="coolant" style="display:none">
+        <div class="form-group col-lg-2">
+          <label for="coolant">Coolant</label>
+          <select id="coolantsel" class="form-control">
+            <script>  $("#coolantsel").load("coolant.txt");</script>
+          </select>
+        </div>
+        <div class="form-group col-lg-8">
+          <label>Comment</label>
+          <input type="text" class="form-control" id="coolantcomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="coolantrequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div id="clamping" style="display:none">
+        <div class="form-group col-lg-2">
+          <label for="clamping">clamping</label>
+          <select id="clampingsel" class="form-control">
+            <script>  $("#clampingsel").load("clamping.txt");</script>
+          </select>
+        </div>
+        <div class="form-group col-lg-8">
+          <label>Comment</label>
+          <input type="text" class="form-control" id="clampingcomment" placeholder="Comment">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Demand from customer</label>
+          <select id="clampingrequiredbycustomer" class="form-control">
+            <option value ="" selected>Please choose ...</option>
+            <option >No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+        </div>
+      </div>
     <div class="form-row">
       <div class="form-group col-lg-2 required">
         <label class="control-label" for="materialsel">Material</label>
@@ -517,6 +561,10 @@
           <option>Die</option>
         </select>
       </div>
+      <div class="form-group col-lg-8">
+        <label for="parttype">Generic comment on the part</label>
+        <textarea type="text" id="commentpart" class="form-control" placeholder="Generic comment on the part" ></textarea>
+      </div>
       <div class="row">   &nbsp; </div>
 </div>
 </div>
@@ -561,7 +609,7 @@
 
 
   <div class="col-lg-offset-1 main">
-    <h2 class="page-header">Application's comments</h2>
+    <h2 class="page-header">General comments</h2>
     <div class="form-row">
       <div class="form-group col-lg-4">
         <label>Difficulty</label>
@@ -738,6 +786,8 @@ $("#edmdspriority").hide()
       $("#cuttingtool").show()
       $("#wire").hide()
       $("#electrode").hide()
+      $("#coolant").show()
+      $("#clamping").show()
       $('#millingmachinesel').on('change',function(){ var sel = $(this).val(); load(sel); })
       break;
       case "edmds":
@@ -750,12 +800,16 @@ $("#edmdspriority").hide()
       $("#wire").hide()
       $('#edmdsmachinesel').on('change',function(){ var sel = $(this).val(); load(sel); })
       $("#normalpriority").hide()
+      $("#coolant").hide()
+      $("#clamping").hide()
       $("#edmdspriority").show()
       break;
       case "edmwire":
       $("#edmwiremachine").show()
       $("#millingmachine").hide()
       $("#edmdsmachine").hide()
+      $("#coolant").hide()
+      $("#clamping").hide()
       $("#lasermachine").hide()
       $("#wire").show()
       $("#cuttingtool").hide()
@@ -766,6 +820,8 @@ $("#edmdspriority").hide()
       $("#lasermachine").show()
       $("#millingmachine").hide()
       $("#edmdsmachine").hide()
+      $("#coolant").hide()
+      $("#clamping").hide()
       $("#edmwiremachine").hide()
       $("#electrode").hide()
       $("#cuttingtool").hide()
@@ -777,6 +833,8 @@ $("#edmdspriority").hide()
       $("#edmdsmachine").hide()
       $("#edmwiremachine").hide()
       $("#lasermachine").hide()
+      $("#coolant").hide()
+      $("#clamping").hide()
       $("#wire").hide()
       $("#cuttingtool").hide()
       $("#electrode").hide()
