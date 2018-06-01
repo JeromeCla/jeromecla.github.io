@@ -36,232 +36,209 @@
   <![endif]-->
   <script>
   $(function(){   $("#topmenu").load("topmenu.html");  });
-  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  $(function(){   $("#sidemenu_project").load("sidemenu_project.html");  });
   </script>
 </head>
 
 <body>
 
   <div id="topmenu"></div>
-
-  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-    <div class="menu_section">
-      <div class="col-lg-1 sidebar">
-        <ul class="nav nav-sidebar">
-          <li><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
-          <li class="active"><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
-          <li><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
-          <li><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
-          <li><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
-          <li><a href="actions.html" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
-          <li><a href="finalizetc.html" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
-          <li><a href="history.html" ><span class="glyphicon glyphicon-time"></span> History</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <div id="sidemenu_project"></div>
 
   <div class="col-lg-offset-1 main">
     <h1 class="page-header">Customer's information</h1>
 
     <form>
       <div class="form-group col-lg-12">
-          <label for="customername">Customer's name</label>
-          <input type="text" readonly class="form-control" id="customername" value="MTU Aero Engines">
+        <label for="customername">Customer's name</label>
+        <input type="text" readonly class="form-control" id="customername" value="MTU Aero Engines">
       </div>
       <div class="form-group col-lg-6">
-          <label for="segmentation">Segmentation</label>
-          <input type="text" readonly class="form-control" id="segmentation" value="Aeronautic">
+        <label for="segmentation">Segmentation</label>
+        <input type="text" readonly class="form-control" id="segmentation" value="Aeronautic">
       </div>
       <div class="form-group col-lg-6">
-          <label for="subsegmentation">Sub-segmentation</label>
-          <input type="text" readonly class="form-control" id="subsegmentation" value="Blade construction">
+        <label for="subsegmentation">Sub-segmentation</label>
+        <input type="text" readonly class="form-control" id="subsegmentation" value="Blade construction">
       </div>
 
-  <div class="form-group col-lg-6">
-      <label for="email">Email</label>
-      <input type="text" readonly class="form-control" id="email" value="mtu.aeroengines@mtu.com">
-  </div>
-  <div class="form-group col-lg-6">
-      <label for="phone">Phone</label>
-      <input type="text" readonly class="form-control" id="phone" value="+49 89 1489-0">
-  </div>
-  <div class="form-group col-lg-12">
-    <label for="adress">Address</label>
-    <input type="text" readonly class="form-control" id="adress" placeholder="1234 Main St" value="Dachauer Str. 665">
-  </div>
-  <div class="form-group col-lg-4">
-    <label for="zipcode">ZIP Code</label>
-    <input type="text" readonly class="form-control" id="zipcode" placeholder="ZIP Code" value="80995">
-  </div>
-  <div class="form-group col-lg-4">
-    <label for="city">City</label>
-    <input type="text" readonly class="form-control" id="city" placeholder="City" value="Munich">
-  </div>
-  <div class="form-group col-lg-4">
-    <label for="country">Country</label>
-    <input type="text" readonly class="form-control" id="country" placeholder="Country" value="Germany">
-  </div>
+      <div class="form-group col-lg-6">
+        <label for="email">Email</label>
+        <input type="text" readonly class="form-control" id="email" value="mtu.aeroengines@mtu.com">
+      </div>
+      <div class="form-group col-lg-6">
+        <label for="phone">Phone</label>
+        <input type="text" readonly class="form-control" id="phone" value="+49 89 1489-0">
+      </div>
+      <div class="form-group col-lg-12">
+        <label for="adress">Address</label>
+        <input type="text" readonly class="form-control" id="adress" placeholder="1234 Main St" value="Dachauer Str. 665">
+      </div>
+      <div class="form-group col-lg-4">
+        <label for="zipcode">ZIP Code</label>
+        <input type="text" readonly class="form-control" id="zipcode" placeholder="ZIP Code" value="80995">
+      </div>
+      <div class="form-group col-lg-4">
+        <label for="city">City</label>
+        <input type="text" readonly class="form-control" id="city" placeholder="City" value="Munich">
+      </div>
+      <div class="form-group col-lg-4">
+        <label for="country">Country</label>
+        <input type="text" readonly class="form-control" id="country" placeholder="Country" value="Germany">
+      </div>
 
-  <h2 class="page-header">Contact's information</h2>
-  <div class="form-group col-lg-2">
-    <label>Name</label>
-    <input type="text" readonly class="form-control" id="namecontact1" placeholder="Name of contact person" value="Francis Johnson">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Position</label>
-    <input type="text" readonly class="form-control" id="positioncontact1" placeholder="Position" value="Head of purchasing">
-  </div>
-  <div class="form-group col-lg-3">
-    <label>Comment</label>
-    <input type="text" readonly class="form-control" id="commentcontact1" placeholder="Comment about contact person" value="Responsible for cost related questions">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Phone number</label>
-    <input type="text" readonly class="form-control" id="phonecontact1" placeholder="Phone number" value="+41 78 563 24 16">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Email adress</label>
-    <input type="text" readonly class="form-control" id="emailcontact1" placeholder="Email" value="francis.johnson@mtu.com">
-  </div>
-  <div class="form-group col-lg-1">
-    <label>OK to contact</label>
-    <div class="radio"><label><input type="radio" name="optradio" id="oktocontact1">Yes</label>
-    <label><input type="radio" name="optradio">No</label></div>
-  </div>
-
-
-  <div class="form-group col-lg-2">
-    <label>Name</label>
-    <input type="text" readonly class="form-control" id="namecontact2" placeholder="Name of contact person" value="Marc Daniel">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Position</label>
-    <input type="text" readonly class="form-control" id="positioncontact2" placeholder="Position" value="Project manager">
-  </div>
-  <div class="form-group col-lg-3">
-    <label>Comment</label>
-    <input type="text" readonly class="form-control" id="commentcontact2" placeholder="Comment about contact person" value="Contact for technical questions - Mitshubishi's fan">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Phone number</label>
-    <input type="text" readonly class="form-control" id="phonecontact2" placeholder="Phone" value="+41 78 763 32 17">
-  </div>
-  <div class="form-group col-lg-2">
-    <label>Email adress</label>
-    <input type="text" readonly class="form-control" id="emailcontact2" placeholder="Email" value="marc.daniel@mtu.com">
-  </div>
-  <div class="form-group col-lg-1">
-    <label>OK to contact</label>
-    <div class="radio"><label><input type="radio" name="optradio2" id="oktocontact2">Yes</label>
-    <label><input type="radio" name="optradio2">No</label></div>
-  </div>
+      <h2 class="page-header">Contact's information</h2>
+      <div class="form-group col-lg-2">
+        <label>Name</label>
+        <input type="text" readonly class="form-control" id="namecontact1" placeholder="Name of contact person" value="Francis Johnson">
+      </div>
+      <div class="form-group col-lg-2">
+        <label>Position</label>
+        <input type="text" readonly class="form-control" id="positioncontact1" placeholder="Position" value="Head of purchasing">
+      </div>
+      <div class="form-group col-lg-3">
+        <label>Comment</label>
+        <input type="text" readonly class="form-control" id="commentcontact1" placeholder="Comment about contact person" value="Responsible for cost related questions">
+      </div>
+      <div class="form-group col-lg-2">
+        <label>Phone number</label>
+        <input type="text" readonly class="form-control" id="phonecontact1" placeholder="Phone number" value="+41 78 563 24 16">
+      </div>
+      <div class="form-group col-lg-2">
+        <label>Email adress</label>
+        <input type="text" readonly class="form-control" id="emailcontact1" placeholder="Email" value="francis.johnson@mtu.com">
+      </div>
+      <div class="form-group col-lg-1">
+        <label>OK to contact</label>
+        <div class="radio"><label><input type="radio" name="optradio" id="oktocontact1">Yes</label>
+          <label><input type="radio" name="optradio">No</label></div>
+        </div>
 
 
+        <div class="form-group col-lg-2">
+          <label>Name</label>
+          <input type="text" readonly class="form-control" id="namecontact2" placeholder="Name of contact person" value="Marc Daniel">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Position</label>
+          <input type="text" readonly class="form-control" id="positioncontact2" placeholder="Position" value="Project manager">
+        </div>
+        <div class="form-group col-lg-3">
+          <label>Comment</label>
+          <input type="text" readonly class="form-control" id="commentcontact2" placeholder="Comment about contact person" value="Contact for technical questions - Mitshubishi's fan">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Phone number</label>
+          <input type="text" readonly class="form-control" id="phonecontact2" placeholder="Phone" value="+41 78 763 32 17">
+        </div>
+        <div class="form-group col-lg-2">
+          <label>Email adress</label>
+          <input type="text" readonly class="form-control" id="emailcontact2" placeholder="Email" value="marc.daniel@mtu.com">
+        </div>
+        <div class="form-group col-lg-1">
+          <label>OK to contact</label>
+          <div class="radio"><label><input type="radio" name="optradio2" id="oktocontact2">Yes</label>
+            <label><input type="radio" name="optradio2">No</label></div>
+          </div>
 
-  <h2 class="page-header">Timing's information</h2>
 
-    <div class="form-group col-lg-4">
-      <label for="dateinvest">Date of invest</label>
-      <input type="text" readonly class="form-control" id="dateinvest" class="form-control"  value="22.12.2017">
+
+          <h2 class="page-header">Timing's information</h2>
+
+          <div class="form-group col-lg-4">
+            <label for="dateinvest">Date of invest</label>
+            <input type="text" readonly class="form-control" id="dateinvest" class="form-control"  value="22.12.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="datetechdecision">Date of technical decision</label>
+            <input type="text"  readonly class="form-control" id="datetechdecision" value="10.12.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="datecreated">Date demand created</label>
+            <input type="text"  readonly class="form-control" id="datecreated"  value="10.09.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="dateaccepted">Date demand accepted</label>
+            <input type="text" readonly class="form-control" id="dateaccepted" class="form-control"  value="13.09.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="datestarted">Date started</label>
+            <input type="text" readonly class="form-control" id="datestarted"  value="10.10.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="datefinish">Expected finished date</label>
+            <input type="text"  class="form-control" id="datefinish"  value="20.10.2017">
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="visitonsite">Visit on site</label>
+            <div class="radio"><label><input type="radio" name="optradio2" id="visitonsite">Yes</label>
+              <label><input type="radio" name="optradio2">No</label></div>
+            </div>
+            <div class="form-group col-lg-4">
+              <label for="datevisit">Date of visit</label>
+              <input type="text"  readonly class="form-control" id="datevisit"  value="21.10.2017">
+            </div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+
     </div>
-    <div class="form-group col-lg-4">
-      <label for="datetechdecision">Date of technical decision</label>
-      <input type="text"  readonly class="form-control" id="datetechdecision" value="10.12.2017">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="datecreated">Date demand created</label>
-      <input type="text"  readonly class="form-control" id="datecreated"  value="10.09.2017">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="dateaccepted">Date demand accepted</label>
-      <input type="text" readonly class="form-control" id="dateaccepted" class="form-control"  value="13.09.2017">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="datestarted">Date started</label>
-      <input type="text" readonly class="form-control" id="datestarted"  value="10.10.2017">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="datefinish">Expected finished date</label>
-      <input type="text"  class="form-control" id="datefinish"  value="20.10.2017">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="visitonsite">Visit on site</label>
-      <div class="radio"><label><input type="radio" name="optradio2" id="visitonsite">Yes</label>
-      <label><input type="radio" name="optradio2">No</label></div>
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="datevisit">Date of visit</label>
-      <input type="text"  readonly class="form-control" id="datevisit"  value="21.10.2017">
-    </div>
-
   </div>
 
-
-</form>
-
-  </div>
-
-
-  </div>
-</div>
-
-<script>
-function imageFormatter() {
+  <script>
+  function imageFormatter() {
     return '<img src="http://hostimage.webdev.info/images/execution_cb09e50e677390bb9d354a9ad48973b5.PNG">';
-}
+  }
 
 
-function getParam(name){
- name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
- var regexS = "[\\?&]"+name+"=([^&#]*)";
- var regex = new RegExp( regexS );
- var results = regex.exec (window.location.href);
- if (results == null)
-     return "";
-     else
-     return results[1];
-}
+  function getParam(name){
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec (window.location.href);
+    if (results == null)
+    return "";
+    else
+    return results[1];
+  }
 
-function readTextFile(file, callback) {
-var rawFile = new XMLHttpRequest();
-rawFile.overrideMimeType("application/json");
-rawFile.open("GET", file, true);
-rawFile.onreadystatechange = function() {
-    if (rawFile.readyState === 4 && rawFile.status == "200") {
+  function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
         callback(rawFile.responseText);
+      }
     }
-}
-rawFile.send(null);
-}
+    rawFile.send(null);
+  }
 
-readTextFile("tcdata/testcut"+getParam("id")+".json", function(text){
-var data = JSON.parse(text);
-$.each(data, function(id, val){
-  var $el = $('[id="'+id+'"]'),
+  readTextFile("tcdata/testcut"+getParam("id")+".json", function(text){
+    var data = JSON.parse(text);
+    $.each(data, function(id, val){
+      var $el = $('[id="'+id+'"]'),
       type = $el.attr('type');
 
-  switch(type){
-      case 'checkbox':
-          $el.attr('checked', 'checked');
-          break;
-      case 'radio':
-          $el.filter('[value="'+val+'"]').attr('checked', 'checked');
-          break;
-      default:
-          $el.val(val);
-  }
-});
-console.log(data);
-});
+      switch(type){
+        case 'checkbox':
+        $el.attr('checked', 'checked');
+        break;
+        case 'radio':
+        $el.filter('[value="'+val+'"]').attr('checked', 'checked');
+        break;
+        default:
+        $el.val(val);
+      }
+    });
+    console.log(data);
+  });
 
-document.getElementById("summaryhtml").href = "summary.html?id="+getParam("id");
-document.getElementById("customerhtml").href = "customer.html?id="+getParam("id");
-document.getElementById("demandhtml").href = "demand.html?id="+getParam("id");
-document.getElementById("documenthtml").href = "documents.html?id="+getParam("id");
-document.getElementById("commenthtml").href = "comment.html?id="+getParam("id");
-document.getElementById("actionshtml").href = "actions.html?id="+getParam("id");
-document.getElementById("finalizetchtml").href = "finalizetc.html?id="+getParam("id");
 </script>
 
 
