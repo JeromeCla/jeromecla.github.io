@@ -102,7 +102,7 @@
     "machine": "FORM P 350",
     "material": "Aluminium",
     "opaxis": "3",
-    "picture": "<img src=\"https://stryker-h.assetsadobe.com/is/image//content/dam/stryker/foot-and-ankle/products/anchorage-2/images/page_thumbnail_anchorage2.jpg?$preset_666_392$\" >",
+    "picture": "<img src=\"https://www.teachertoolkit.co.uk/wp-content/uploads/2017/04/shutterstock_213735727.jpg\" >",
     "region": "China",
     "segmentation": "Mold and Die",
     "status": "   <select  name=\"status\" class=\"form-control\" id=\"status\"><option selected value=\"ongoing\">On Going</option> <option selected value=\"onhold\">On Hold</option>  <option selected value=\"planned\">Planned</option>  <option selected value=\"finished\">Finished</option> <option value=\"docmissing\">Document missing</option>  <option value=\"partmissing\">Raw part missing</option> <option value=\"accepted\">Accepted</option> <option value=\"refused\">Refused</option>    </select>",
