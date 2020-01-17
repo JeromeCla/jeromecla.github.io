@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu_MTU.html");  });
+  $(function(){   $("#sidemenu_ae").load("sidemenu_ae.html");  });
+  </script>
+</head>
+
+<body>
+  <script>
+    var password;
+    var thePassword="ee857f7d156e974bd0bfd8b97d9d0c81";
+    password=prompt('Enter Password','');
+    var passhash= CryptoJS.MD5(password);
+    if (passhash==thePassword) {  }
+    else { window.location="http://www.google.com/"; }
+    </script>
+  <div id="topmenu"></div>
+
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <div class="col-lg-1 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="customer.html"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
+          <li><a href="demand_salesman_MTU.html"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
+          <li><a href="documents.html"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+          <li><a href="actions.html"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+          <li><a href="comment.html"><span class="glyphicon glyphicon-comment"></span> Chat/Comment</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h1 class="page-header">Customer's information</h1>
+
+    <form>
+      <div class="form-group col-lg-12">
+          <label for="inputEmail4">Customer's name</label>
+          <input type="text" readonly class="form-control" id="inputEmail4" value="MTU Aero Engines AG">
+      </div>
+      <div class="form-group col-lg-6">
+          <label for="inputEmail4">Segmentation</label>
+          <input type="text" readonly class="form-control" id="inputEmail4" value="Aeronautic">
+      </div>
+      <div class="form-group col-lg-6">
+          <label for="inputEmail4">Sub-segmentation</label>
+          <input type="text" readonly class="form-control" id="inputEmail4" value="Blade construction">
+      </div>
+  <div class="form-group col-lg-6">
+      <label for="inputEmail4">Email</label>
+      <input type="text" readonly class="form-control" id="inputEmail4" value="tes@mtu.com">
+  </div>
+  <div class="form-group col-lg-6">
+      <label for="phone">Phone</label>
+      <input type="text" readonly class="form-control" id="phone" value="+49 89 1489-0">
+  </div>
+  <div class="form-group col-lg-12">
+    <label for="inputAddress">Address</label>
+    <input type="text" readonly class="form-control" id="inputAddress" placeholder="1234 Main St" value="Dachauer Str. 665">
+  </div>
+  <div class="form-group col-lg-4">
+    <label for="inputAddress2">ZIP Code</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="ZIP Code" value="80995">
+  </div>
+  <div class="form-group col-lg-4">
+    <label for="inputAddress2">City</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="City" value="Munich">
+  </div>
+  <div class="form-group col-lg-4">
+    <label for="inputAddress2">Country</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="Germany">
+  </div>
+
+
+  <h2 class="page-header">Contact's information</h2>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Name</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Name of contact person" value="Francis Johnson">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Position</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="Head of purchasing">
+  </div>
+  <div class="form-group col-lg-3">
+    <label for="inputAddress2">Comment</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="Responsible for cost related questions">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Phone number</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="+41 78 563 24 16">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Email adress</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="francis.johnson@mtu.com">
+  </div>
+  <div class="form-group col-lg-1">
+    <label for="inputAddress2">OK to contact</label>
+    <div class="radio"><label><input type="radio" name="optradio">Yes</label>
+    <label><input type="radio" name="optradio">No</label></div>
+  </div>
+
+
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Name</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Name of contact person" value="Marc Daniel">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Position</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="Project manager">
+  </div>
+  <div class="form-group col-lg-3">
+    <label for="inputAddress2">Comment</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="Contact for technical questions - Mitshubishi's fan">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Phone number</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="+41 78 763 32 17">
+  </div>
+  <div class="form-group col-lg-2">
+    <label for="inputAddress2">Email adress</label>
+    <input type="text" readonly class="form-control" id="inputAddress2" placeholder="Country" value="marc.daniel@mtu.com">
+  </div>
+  <div class="form-group col-lg-1">
+    <label for="inputAddress2">OK to contact</label>
+    <div class="radio"><label><input type="radio" name="optradio2">Yes</label>
+    <label><input type="radio" name="optradio2">No</label></div>
+  </div>
+
+
+
+  <h2 class="page-header">Timing's information</h2>
+
+
+    <div class="form-group col-lg-4">
+      <label for="dateinvest">Date of invest</label>
+      <input type="text"  class="form-control" id="inputState" class="form-control"  value="22.12.2017">
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datetechdecision">Date of technical decision</label>
+      <input type="text"   class="form-control" id="inputCity" value="10.12.2017">
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datecreated">Date demand created</label>
+      <input type="text"  readonly class="form-control" id="datetimepicker4"  value="10.09.2017">
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="dateaccepted">Date demand accepted</label>
+      <input type="text" readonly class="form-control" id="datetimepicker4" class="form-control"  >
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datestarted">Date started</label>
+      <input type="text"  readonly class="form-control" id="datetimepicker4"  value="">
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datefinish">Expected finished date</label>
+      <input type="text" class="form-control" id="datetimepicker4"  value="">
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datefinish">Visit on site</label>
+      <div class="radio">  <label><input type="radio" name="visit">Yes</label>
+        <label><input type="radio" name="visit">No</label></div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label for="datefinish">Date of visit</label>
+      <input type="text"   class="form-control" id="datetimepicker4"  value="21.10.2017">
+    </div>
+
+  </div>
+
+
+</form>
+
+  </div>
+
+
+  </div>
+</div>
+
+<script>
+function imageFormatter() {
+    return '<img src="http://hostimage.webdev.info/images/execution_cb09e50e677390bb9d354a9ad48973b5.PNG">';
+}
+
+</script>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

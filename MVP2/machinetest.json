@@ -1,0 +1,42 @@
+[
+  {
+    "type":"Machine",
+    "technology": "Milling",
+    "machine": "Mill P 250",
+    "location": "Nidau",
+    "contact": "John Mill",
+    "region": "Europe"
+  },
+  {
+    "type":"Machine",
+    "technology": "Laser",
+    "machine": "Laser P 400",
+    "location": "Shanghai",
+    "contact": "John Doe",
+    "region": "Asia"
+  },
+  {
+    "type":"Machine",
+    "technology": "Laser",
+    "machine": "Laser P 800",
+    "location": "Paris",
+    "contact": "John Sim",
+    "region": "Europe"
+  },
+  {
+    "type":"Metrology",
+    "technology": "CMM",
+    "machine": "Metrology 3000",
+    "location": "Shanghai",
+    "contact": "John Doe",
+    "region": "Asia"
+  },
+  {
+    "type":"Machine",
+    "technology": "EDM-Die Sinking",
+    "machine": "Super Form K7000",
+    "location": "Chicago",
+    "contact": "John DS",
+    "region": "US/Canada"
+  }
+]

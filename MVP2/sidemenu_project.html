@@ -1,0 +1,83 @@
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section">
+    <div class="col-lg-1 sidebar">
+      <ul class="nav nav-sidebar">
+        <li id="summary"><a href="summary.html" id="summaryhtml"><span class="glyphicon glyphicon-info-sign"></span> Summary</a></li>
+        <li id="customer"><a href="customer.html" id="customerhtml"><span class="glyphicon glyphicon-king"></span> Customer<span class="sr-only">(current)</span></a></li>
+        <li id="demand" ><a href="demand.html" id="demandhtml"><span class="glyphicon glyphicon-list"></span> Demand</a></li>
+        <li id="documents"><a href="documents.html" id="documenthtml"><span class="glyphicon glyphicon-folder-open"></span> Documents</a></li>
+        <li id="comment"><a href="comment.html" id="commenthtml"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
+        <li id="actions"><a href="actions.html" id="actionshtml"><span class="glyphicon glyphicon-star"></span> Actions</a></li>
+        <li id="finalizetc"><a href="finalizetc.html" id="finalizetchtml"><span class="glyphicon glyphicon-check"></span> Application </a></li>
+        <li id="history"><a href="history.html" ><span class="glyphicon glyphicon-time"></span> History</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location.protocol + "/" + window.location.host + "/" + window.location.pathname;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');
+    });
+
+
+    function getParam(name){
+     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+     var regexS = "[\\?&]"+name+"=([^&#]*)";
+     var regex = new RegExp( regexS );
+     var results = regex.exec (window.location.href);
+     if (results == null)
+         return "";
+         else
+         return results[1];
+    }
+
+    var role=getParam("role");
+    switch(role){
+      case "sales":
+      $("#summary").show();
+      $("#customer").show();
+      $("#demand").show();
+      $("#documents").show();
+      $("#comment").show();
+      $("#actions").show();
+      $("#finalizetc").hide();
+      $("#history").show();
+      break;
+      case "ae":
+      $("#summary").show();
+      $("#customer").show();
+      $("#demand").show();
+      $("#documents").show();
+      $("#comment").show();
+      $("#actions").show();
+      $("#finalizetc").show();
+      $("#history").show();
+      break;
+      case "am":
+      $("#summary").show();
+      $("#customer").show();
+      $("#demand").show();
+      $("#documents").show();
+      $("#comment").show();
+      $("#actions").show();
+      $("#finalizetc").show();
+      $("#history").show();
+      break;
+      default:
+    }
+
+
+      document.getElementById("summaryhtml").href = "summary.html?role="+getParam("role");
+      document.getElementById("customerhtml").href = "customer.html?role="+getParam("role");
+      document.getElementById("demandhtml").href = "demand.html?role="+getParam("role");
+      document.getElementById("documenthtml").href = "documents.html?role="+getParam("role");
+      document.getElementById("commenthtml").href = "comment.html?role="+getParam("role");
+      document.getElementById("actionshtml").href = "actions.html?role="+getParam("role");
+      document.getElementById("finalizetchtml").href = "finalizetc.html?role="+getParam("role");
+
+</script>

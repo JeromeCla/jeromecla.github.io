@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Application Platform</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  $(function(){   $("#topmenu").load("topmenu.html");  });
+  $(function(){   $("#sidemenu_project").load("sidemenu_project.html");  });
+  </script>
+</head>
+
+<body>
+
+  <div id="topmenu"></div>
+  <div id="sidemenu_project"></div>
+
+  <div class="col-lg-offset-1 main">
+    <h1 class="text-center">Customer's name</h1>
+    <h2 class="page-header">Upload documents</h2>
+    <div class="container">
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Upload Files</strong> <small>Bootstrap files upload</small></div>
+            <div class="panel-body">
+
+              <!-- Standar Form -->
+              <h4>Select files from your computer</h4>
+              <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                <div class="form-inline">
+                  <div class="form-group">
+                    <input type="file" name="files[]" id="js-upload-files" multiple>
+                  </div>
+                  <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                </div>
+              </form>
+
+              <!-- Drop Zone -->
+              <h4>Or drag and drop files below</h4>
+              <div class="upload-drop-zone" id="drop-zone">
+                Just drag and drop files here
+              </div>
+
+
+              <!-- Upload Finished -->
+              <div class="js-upload-finished">
+                <h3>Processed files</h3>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>Drawing.pdf</a>
+                  <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>Machiningdata.csv</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+  </div>
+
+  <div class="col-lg-offset-1 main">
+    <h2 class="page-header">Uploaded documents</h2>
+    <div class="container">
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Uploaded Files (Files will be sorted by type (CAD, CAM, machining report, pictures, measuring reports etc...))</strong> </div>
+            <div class="panel-body">
+
+              <!-- Standar Form -->
+              <h4>Uploaded documents</h4>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_01_EN.pdf"> Quote (automatic from CRM) </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_01_EN.pdf"> Process to acquire machining data (automatic from machine choses) </a></div>
+                <p>&nbsp;</p>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_01_EN.pdf"> Drawing </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> CAD </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_03_EN.pdf"> Machining data.csv </a></div>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Picture mold face 1 </a></div>
+                <p>&nbsp;</p>
+                <div class="row col-md-offset-1"><a href="http://www.gfms.com/content/dam/gfac/PDF-Documents/Results-Today/GFAC_Results_today_02_EN.pdf"> Download all in ZIP file </a></div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+  </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
